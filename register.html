@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register an account with Stackly as a volunteer, donor, or regional coordinator.">
+    <title>Register | Stackly Vault Portal</title>
+    <link rel="stylesheet" href="css/style.css?v=2.1">
+</head>
+<body class="auth-page" style="padding: 40px 24px;">
+
+    <!-- Back to Home Button in top left -->
+    <a href="index.html" class="back-to-home" aria-label="Return to homepage">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        <span>Back to Home</span>
+    </a>
+
+    <!-- Center Auth Card -->
+    <div class="auth-card" style="max-width: 540px;">
+        <div class="auth-header">
+            <!-- Stackly Logo -->
+            <img src="images/logo.webp" alt="Stackly Logo" style="height: 38px; width: auto; object-fit: contain; margin: 0 auto 20px; display: block;">
+            <h2>Join Stackly</h2>
+            <p>Register as a volunteer, donor, or coordinator</p>
+        </div>
+        
+        <form id="register-active-form" data-validate>
+            <!-- Full Name -->
+            <div class="form-group">
+                <label class="form-label" for="fullname">Full Name *</label>
+                <div class="input-icon-wrapper">
+                    <!-- User SVG Icon -->
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                    <input type="text" id="fullname" name="fullname" class="form-control" placeholder="e.g. Samuel Jackson" required>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <!-- Email Address -->
+                <div class="form-group">
+                    <label class="form-label" for="email">Email Address *</label>
+                    <div class="input-icon-wrapper">
+                        <!-- Envelope SVG Icon -->
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="sam@example.com" required>
+                    </div>
+                </div>
+                <!-- Mobile Number -->
+                <div class="form-group">
+                    <label class="form-label" for="mobile">Mobile Number *</label>
+                    <div class="input-icon-wrapper">
+                        <!-- Phone SVG Icon -->
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                        <input type="tel" id="mobile" name="mobile" class="form-control" placeholder="5550199" required>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- User Type -->
+            <div class="form-group">
+                <label class="form-label" for="role">Account User Type *</label>
+                <select id="role" name="role" class="form-control" required style="cursor: pointer; appearance: none; -webkit-appearance: none;">
+                    <option value="">Choose your primary involvement</option>
+                    <option value="donor">Financial Donor (Support relief funds)</option>
+                    <option value="volunteer">Field Volunteer (Assist rescue operations)</option>
+                    <option value="organization">Organization Representative (Corporate CSR)</option>
+                </select>
+            </div>
+            
+            <div class="form-row">
+                <!-- Password -->
+                <div class="form-group">
+                    <label class="form-label" for="password">Password *</label>
+                    <div class="input-icon-wrapper password-input-wrapper">
+                        <!-- Lock SVG Icon -->
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                        <input type="password" id="password" name="password" class="form-control" placeholder="••••••••" required>
+                        <button type="button" class="password-toggle-icon" aria-label="Toggle password visibility" style="top: 50%; right: 16px;">
+                            <svg viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                        </button>
+                    </div>
+                </div>
+                <!-- Confirm Password -->
+                <div class="form-group">
+                    <label class="form-label" for="confirm-password">Confirm Password *</label>
+                    <div class="input-icon-wrapper password-input-wrapper">
+                        <!-- Lock SVG Icon -->
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+                        <input type="password" id="confirm-password" name="confirm-password" class="form-control" placeholder="••••••••" required>
+                        <button type="button" class="password-toggle-icon" aria-label="Toggle password visibility" style="top: 50%; right: 16px;">
+                            <svg viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Terms Accept -->
+            <div class="form-check" style="margin-bottom: 25px;">
+                <input type="checkbox" id="terms" name="terms" class="form-check-input" required data-field-name="Terms and Conditions">
+                <label class="form-check-label" for="terms">
+                    I agree to Stackly's <a href="404.html">Privacy Policy</a> and <a href="404.html">Terms of Service</a>.
+                </label>
+            </div>
+            
+            <!-- Sign Up button -->
+            <button type="submit" class="btn btn-primary btn-block" style="gap: 10px;">
+                <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: currentColor;" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+                <span>Create Account</span>
+            </button>
+        </form>
+        
+        <!-- Footer Sign In link -->
+        <div class="auth-footer">
+            <p>Already have an account? <a href="login.html">Sign In Here</a></p>
+        </div>
+    </div>
+
+    <script src="js/validation.js"></script>
+    <script src="js/main.js?v=2.0"></script>
+</body>
+</html>

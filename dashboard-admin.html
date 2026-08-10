@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stackly Administrative Command Center dashboard.">
+    <title>Admin Dashboard | Stackly</title>
+    <link rel="stylesheet" href="css/style.css?v=2.1">
+</head>
+<body>
+
+    <!-- STICKY NAVBAR (Minimalist style for Admin) -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo" aria-label="Disaster Relief Foundation Home">
+                <img src="images/logo.webp" alt="Stackly Logo" style="height: 38px; width: auto; object-fit: contain;">
+                <span style="font-size: 0.95rem; font-weight: 600; color: var(--color-text-muted); margin-left: 5px;">HQ</span>
+            </a>
+            
+            <div class="dashboard-user-card">
+                <div class="dashboard-avatar" style="background-color: var(--color-primary-light);">HQ</div>
+                <div class="dashboard-user-info">
+                    <h4>Admin Coord</h4>
+                    <span>System Administrator</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="dashboard-wrapper">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="#" class="sidebar-item active" data-tab="overview">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                        <span>Command Overview</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-item" data-tab="volunteers">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 5.42 5 8.5s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                        <span>Volunteers Desk</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-item" data-tab="donations">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        <span>Donor Records</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-item" data-tab="programs">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+                        <span>Program Control</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-item" data-tab="messages">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        <span>Message Desk</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-item" data-tab="settings">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3-1.57-3-3.5s1.07-3.5 3-3.5 3 1.57 3 3.5-1.07 3.5-3 3.5z"/></svg>
+                        <span>HQ Config</span>
+                    </a>
+                </li>
+            </ul>
+            <a href="index.html" class="sidebar-item" style="margin-top: auto; color: var(--color-danger);">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.09 15.59L11.5 17l5-5-5-5-1.41 1.41L12.67 11H3v2h9.67l-2.58 2.59zM19 3H5c-1.11 0-2 .9-2 2v4h2V5h14v14H5v-4H3v4c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg>
+                <span>Logout</span>
+            </a>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="dashboard-main">
+            
+            <!-- PANEL: OVERVIEW -->
+            <div id="panel-overview" class="dashboard-panel">
+                <div class="dashboard-header">
+                    <div class="dashboard-title">
+                        <h2>HQ Tactical Overview</h2>
+                        <p>Command statistics for system-wide volunteer teams and relief capital.</p>
+                    </div>
+                </div>
+                
+                <!-- Metric Cards -->
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <div class="dashboard-card-icon success" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                        </div>
+                        <div class="dashboard-card-details">
+                            <span>Total Donations</span>
+                            <h3>$84,200</h3>
+                        </div>
+                    </div>
+                    <div class="dashboard-card">
+                        <div class="dashboard-card-icon primary" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                        </div>
+                        <div class="dashboard-card-details">
+                            <span>Volunteers Standby</span>
+                            <h3 id="count-active-volunteers">8,750</h3>
+                        </div>
+                    </div>
+                    <div class="dashboard-card">
+                        <div class="dashboard-card-icon blue" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 5.42 5 8.5s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                        </div>
+                        <div class="dashboard-card-details">
+                            <span>People Assisted</span>
+                            <h3>154,200</h3>
+                        </div>
+                    </div>
+                    <div class="dashboard-card">
+                        <div class="dashboard-card-icon accent" aria-hidden="true">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        </div>
+                        <div class="dashboard-card-details">
+                            <span>Active Deployments</span>
+                            <h3>4 Missions</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Donation line chart -->
+                <div class="dashboard-content-split">
+                    <div class="dashboard-content-card">
+                        <div class="dashboard-card-header">
+                            <h3>Cumulative Donations Trend (2026)</h3>
+                            <span style="font-size: 0.8rem; color: var(--color-text-muted);">Amounts in thousands (USD)</span>
+                        </div>
+                        <div class="chart-container">
+                            <svg id="svg-donations-chart" class="svg-chart"></svg>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-content-card">
+                        <div class="dashboard-card-header">
+                            <h3>Urgent Resource Alerts</h3>
+                        </div>
+                        <ul class="transparency-list" style="padding-left: 0;">
+                            <li style="color: var(--color-text-dark); margin-bottom: 12px; border-left: 3px solid var(--color-danger); padding-left: 10px;">
+                                <strong>Water Purification Systems</strong><br>
+                                <span style="font-size: 0.8rem; color: var(--color-text-muted);">Stock low at Camp B (Monsoon sector). Needs 20 crates.</span>
+                            </li>
+                            <li style="color: var(--color-text-dark); margin-bottom: 12px; border-left: 3px solid var(--color-secondary); padding-left: 10px;">
+                                <strong>Standby Volunteers</strong><br>
+                                <span style="font-size: 0.8rem; color: var(--color-text-muted);">6 coastal alerts triggered. Volunteers dispatch requested.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Recent Registrations -->
+                <div class="dashboard-content-card">
+                    <div class="dashboard-card-header">
+                        <h3>Newest Volunteer Signups</h3>
+                    </div>
+                    <div class="table-wrapper">
+                        <table class="db-table" aria-label="Recent Volunteer Signups">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Specialty Selected</th>
+                                    <th scope="col">Availability</th>
+                                    <th scope="col">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Richard Harris</td>
+                                    <td>richard.h@example.com</td>
+                                    <td>Emergency Frontline Rescue</td>
+                                    <td>On-Call Alerts</td>
+                                    <td><span class="status-badge pending">Pending Approval</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Sarah Jenkins</td>
+                                    <td>sarah.j@example.com</td>
+                                    <td>Medical Camps &amp; First Aid</td>
+                                    <td>Weekends</td>
+                                    <td><span class="status-badge pending">Pending Approval</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PANEL: VOLUNTEERS -->
+            <div id="panel-volunteers" class="dashboard-panel" style="display: none;">
+                <div class="dashboard-header">
+                    <div class="dashboard-title">
+                        <h2>Volunteer Management Desk</h2>
+                        <p>Approve applications, adjust assignments, and review credentials.</p>
+                    </div>
+                </div>
+                
+                <div class="dashboard-content-card">
+                    <div class="table-wrapper">
+                        <table class="db-table" aria-label="Volunteers Management Table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Volunteer Name</th>
+                                    <th scope="col">Email Address</th>
+                                    <th scope="col">Contact</th>
+                                    <th scope="col">Operational Field</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Richard Harris</td>
+                                    <td>richard.h@example.com</td>
+                                    <td>5550212</td>
+                                    <td>Emergency Frontline Rescue</td>
+                                    <td><span class="status-badge pending">Pending</span></td>
+                                    <td><button class="btn btn-primary btn-sm btn-approve-volunteer">Approve</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Sarah Jenkins</td>
+                                    <td>sarah.j@example.com</td>
+                                    <td>5550219</td>
+                                    <td>Medical Camps &amp; First Aid</td>
+                                    <td><span class="status-badge pending">Pending</span></td>
+                                    <td><button class="btn btn-primary btn-sm btn-approve-volunteer">Approve</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Michael Chang</td>
+                                    <td>m.chang@example.com</td>
+                                    <td>5550183</td>
+                                    <td>Supply &amp; Food Logistics</td>
+                                    <td><span class="status-badge success">Approved</span></td>
+                                    <td><button class="btn btn-secondary btn-sm" disabled style="background-color: var(--color-success); border-color: var(--color-success); color: white;">Approved</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PANEL: DONATIONS -->
+            <div id="panel-donations" class="dashboard-panel" style="display: none;">
+                <div class="dashboard-header">
+                    <div class="dashboard-title">
+                        <h2>System Donation Ledger</h2>
+                        <p>Real-time audit log of all financial allocations to the foundation.</p>
+                    </div>
+                    <button class="btn btn-secondary btn-sm">Export CSV Ledger</button>
+                </div>
+                
+                <div class="dashboard-content-card">
+                    <div class="table-wrapper">
+                        <table class="db-table" aria-label="Global Donations Ledger">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Transaction ID</th>
+                                    <th scope="col">Donor Name</th>
+                                    <th scope="col">Email Address</th>
+                                    <th scope="col">Allocation Project</th>
+                                    <th scope="col">Amount</th>
+                                    <th scope="col">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#TXN-98431</td>
+                                    <td>John Doe</td>
+                                    <td>john@example.com</td>
+                                    <td>Monsoon Floods Emergency Response</td>
+                                    <td><strong>$120.00</strong></td>
+                                    <td><span class="status-badge success">Success</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#TXN-98430</td>
+                                    <td>Emily Watson</td>
+                                    <td>emily@example.com</td>
+                                    <td>Medical First-Aid Camps</td>
+                                    <td><strong>$500.00</strong></td>
+                                    <td><span class="status-badge success">Success</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#TXN-98429</td>
+                                    <td>Apex Corp CSR</td>
+                                    <td>csr@apexcorp.com</td>
+                                    <td>Temporary Shelters &amp; Blankets</td>
+                                    <td><strong>$5,000.00</strong></td>
+                                    <td><span class="status-badge success">Success</span></td>
+                                </tr>
+                                <tr>
+                                    <td>#TXN-98428</td>
+                                    <td>Robert Vance</td>
+                                    <td>vance@example.com</td>
+                                    <td>General Relief Fund</td>
+                                    <td><strong>$50.00</strong></td>
+                                    <td><span class="status-badge success">Success</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PANEL: PROGRAMS -->
+            <div id="panel-programs" class="dashboard-panel" style="display: none;">
+                <div class="dashboard-header">
+                    <div class="dashboard-title">
+                        <h2>Relief Program Status Panel</h2>
+                        <p>Adjust program operational target statistics dynamically below.</p>
+                    </div>
+                </div>
+                
+                <div class="dashboard-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <!-- Program Item 1 -->
+                    <div class="dashboard-content-card program-control-item" style="padding: 24px;">
+                        <h4 style="margin-bottom: 6px; font-weight: 700; color: var(--color-primary);">Monsoon Floods Relief</h4>
+                        <p style="font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 20px;">Flood rescue and supply bags dispatch.</p>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <div style="display: flex; justify-content: space-between; font-weight: 600; font-size: 0.85rem; margin-bottom: 8px;">
+                                <span>Adjust Progress</span>
+                                <span class="progress-percentage" style="color: var(--color-secondary);">82%</span>
+                            </div>
+                            <input type="range" min="0" max="100" value="82" class="form-control program-progress-slider" style="padding: 5px 0; background: transparent; cursor: pointer;">
+                        </div>
+                    </div>
+                    <!-- Program Item 2 -->
+                    <div class="dashboard-content-card program-control-item" style="padding: 24px;">
+                        <h4 style="margin-bottom: 6px; font-weight: 700; color: var(--color-primary);">Cyclone Rehabilitation</h4>
+                        <p style="font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 20px;">Housing rebuild and solar grids.</p>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <div style="display: flex; justify-content: space-between; font-weight: 600; font-size: 0.85rem; margin-bottom: 8px;">
+                                <span>Adjust Progress</span>
+                                <span class="progress-percentage" style="color: var(--color-secondary);">58%</span>
+                            </div>
+                            <input type="range" min="0" max="100" value="58" class="form-control program-progress-slider" style="padding: 5px 0; background: transparent; cursor: pointer;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PANEL: MESSAGES -->
+            <div id="panel-messages" class="dashboard-panel" style="display: none;">
+                <div class="dashboard-header">
+                    <div class="dashboard-title">
+                        <h2>Inquiry Message Center</h2>
+                        <p>Reply directly to incoming public contact messages below.</p>
+                    </div>
+                </div>
+                
+                <div class="dashboard-content-card">
+                    <div class="table-wrapper">
+                        <table class="db-table" id="admin-messages-table" aria-label="HQ Messages Table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Sender</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Message Content</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>David Vance</td>
+                                    <td>david@vance-refrigeration.com</td>
+                                    <td>Would like to pledge $2,000 corporate matching funds for fire victims. Who do we coordinate with?</td>
+                                    <td><span class="status-badge pending">New Inquest</span></td>
+                                    <td><button class="btn btn-primary btn-sm btn-reply-message">Reply</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Dr. Amanda Ross</td>
+                                    <td>amanda@medical-reserves.org</td>
+                                    <td>I have a team of 4 physicians ready for deployment to the monsoon sector. Can you provide base coordinates?</td>
+                                    <td><span class="status-badge pending">New Inquest</span></td>
+                                    <td><button class="btn btn-primary btn-sm btn-reply-message">Reply</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Clara Oswald</td>
+                                    <td>clara@example.com</td>
+                                    <td>Just registered as a logistics volunteer, looking forward to safety training modules.</td>
+                                    <td><span class="status-badge success">Replied</span></td>
+                                    <td><button class="btn btn-secondary btn-sm" disabled style="border: none; background: transparent; color: var(--color-text-muted);">Replied</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PANEL: SETTINGS -->
+            <div id="panel-settings" class="dashboard-panel" style="display: none;">
+                <div class="dashboard-header">
+                    <div class="dashboard-title">
+                        <h2>HQ System Configuration</h2>
+                        <p>Adjust system thresholds and operational parameters.</p>
+                    </div>
+                </div>
+                
+                <div class="form-card">
+                    <form id="admin-settings-form" data-validate>
+                        <div class="form-group">
+                            <label class="form-label" for="eoc-commander">EOC Commander Name *</label>
+                            <input type="text" id="eoc-commander" class="form-control" value="Director Marcus Aurelius" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="alert-threshold">Disaster Trigger Alert Threshold (Radius km) *</label>
+                                <input type="number" id="alert-threshold" class="form-control" value="50" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="reserve-target">Global Emergency Reserve Goal (USD $) *</label>
+                                <input type="number" id="reserve-target" class="form-control" value="500000" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="margin-top: 15px;">Save Config Settings</button>
+                    </form>
+                </div>
+            </div>
+            
+        </main>
+    </div>
+
+    <script src="js/validation.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/main.js?v=2.0"></script>
+</body>
+</html>

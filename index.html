@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Disaster Relief Foundation - Providing rapid emergency response, food distribution, medical assistance, temporary shelters, and community recovery to disaster-hit zones.">
+    <title>Together We Respond, Together We Rebuild | Disaster Relief Foundation</title>
+    <link rel="stylesheet" href="css/style.css?v=2.1">
+</head>
+<body>
+
+    <!-- STICKY NAVBAR -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo" aria-label="Disaster Relief Foundation Home">
+                <img src="images/logo.webp" alt="Stackly Logo" style="height: 38px; width: auto; object-fit: contain;">
+            </a>
+            
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            
+            <nav class="nav" aria-label="Main Navigation">
+                <div class="nav-menu" id="nav-menu">
+                    <!-- Mobile Drawer Header -->
+                    <div class="drawer-header">
+                        <a href="index.html" class="logo">
+                            <img src="images/logo.webp" alt="Stackly Logo" style="height: 34px; width: auto; object-fit: contain;">
+                        </a>
+                        <button class="drawer-close" aria-label="Close Menu">
+                            <svg viewBox="0 0 24 24" style="width: 24px; height: 24px; fill: currentColor;"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+                        </button>
+                    </div>
+                    
+                    <!-- Mobile Search -->
+                    <div class="drawer-search">
+                        <div style="position: relative; width: 100%;">
+                            <input type="text" placeholder="Search resources..." style="width: 100%; padding: 10px 14px; border-radius: var(--radius-sm); border: 1px solid rgba(255, 255, 255, 0.1); background-color: rgba(0, 0, 0, 0.2); color: white; font-size: 0.9rem;" onkeyup="if(event.key === 'Enter') { window.location.href='404.html'; }">
+                            <svg viewBox="0 0 24 24" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; fill: rgba(255, 255, 255, 0.4); pointer-events: none;"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                        </div>
+                    </div>
+
+                    <!-- Nav Links List -->
+                    <ul class="nav-links">
+                        <li><a href="index.html" class="nav-link active">Home</a></li>
+                        <li><a href="about.html" class="nav-link ">About</a></li>
+                        <li><a href="programs.html" class="nav-link ">Programs</a></li>
+                        <li><a href="response.html" class="nav-link ">Disaster Response</a></li>
+                        <li><a href="involved.html" class="nav-link ">Get Involved</a></li>
+                        <li><a href="contact.html" class="nav-link ">Contact</a></li>
+                    </ul>
+                    
+                    <!-- Mobile Actions -->
+                    <div class="nav-mobile-cta">
+                        <a href="login.html" class="btn btn-secondary btn-block">Login</a>
+                        <a href="donate.html" class="btn btn-primary btn-block">Donate</a>
+                    </div>
+                    
+                    <!-- Mobile Contact Info -->
+                    <div class="drawer-contact-info">
+                        <h5>Contact Info</h5>
+                        <p>
+                            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                            <span>+1 (800) 555-RESCUE</span>
+                        </p>
+                        <p>
+                            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                            <span>operations@stackly.org</span>
+                        </p>
+                        <p>
+                            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                            <span>102 Safety Boulevard, Washington, DC</span>
+                        </p>
+                    </div>
+                </div>
+            </nav>
+            
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
+                <a href="donate.html" class="btn btn-primary btn-sm">Donate</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. HERO SECTION -->
+        <section class="hero" aria-label="Welcome section">
+            <div class="container hero-grid">
+                <div class="hero-content reveal-left">
+                    <div class="hero-tag">
+                        <span></span> Active Emergency response active
+                    </div>
+                    <h1 class="hero-title">Together We Respond.<br>Together We Rebuild.</h1>
+                    <p class="hero-desc">
+                        Providing rapid disaster relief, emergency assistance, critical medical supplies, clean food, and shelter for communities hit by extreme natural events.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="donate.html" class="btn btn-primary">Donate Now</a>
+                        <a href="involved.html" class="btn btn-outline-white">Volunteer With Us</a>
+                    </div>
+                    <div class="hero-trust-grid">
+                        <div class="hero-trust-item">
+                            <span class="hero-trust-num">24h</span>
+                            <span class="hero-trust-label">Crisis Dispatch</span>
+                        </div>
+                        <div class="hero-trust-item">
+                            <span class="hero-trust-num">100%</span>
+                            <span class="hero-trust-label">Direct Field Aid</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual reveal-right">
+                    <div class="hero-img-wrapper">
+                        <img src="images/hero_emergency.webp" alt="Emergency response boat rescuing families from a flooded town street" width="600" height="338">
+                        <div class="hero-overlay-badge">
+                            <div class="hero-overlay-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M12 2c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 19.4c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0l2.79-2.79C10.08 18.66 11.02 19 12 19c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 15c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"/></svg>
+                            </div>
+                            <div class="hero-overlay-text">
+                                <p>Live Operations</p>
+                                <h4>Rescue Ops active</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. EMERGENCY IMPACT STATISTICS -->
+        <section class="stats" aria-label="Impact Stats">
+            <div class="container stats-grid">
+                <div class="stat-card reveal">
+                    <div class="stat-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 5.42 5 8.5s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                    </div>
+                    <div class="stat-number" data-target="154200" data-suffix="+">0</div>
+                    <div class="stat-label">People Helped</div>
+                </div>
+                <div class="stat-card reveal">
+                    <div class="stat-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                    </div>
+                    <div class="stat-number" data-target="342" data-suffix="">0</div>
+                    <div class="stat-label">Emergency Responses</div>
+                </div>
+                <div class="stat-card reveal">
+                    <div class="stat-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                    </div>
+                    <div class="stat-number" data-target="8750" data-suffix="+">0</div>
+                    <div class="stat-label">Active Volunteers</div>
+                </div>
+                <div class="stat-card reveal">
+                    <div class="stat-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                    </div>
+                    <div class="stat-number" data-target="420" data-suffix="+">0</div>
+                    <div class="stat-label">Communities Supported</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. OUR MISSION -->
+        <section class="section section-bg-white" aria-label="Our Mission">
+            <div class="container mission-grid">
+                <div class="mission-image-wrapper reveal-left">
+                    <img src="images/mission_distribution.webp" alt="Volunteers handing out relief foods and water boxes at a crisis shelter" width="600" height="400" loading="lazy">
+                    <div class="mission-floating-stat">
+                        <h3>92%</h3>
+                        <p>Efficiency Rating</p>
+                    </div>
+                </div>
+                <div class="mission-content reveal-right">
+                    <div class="mission-header">
+                        <span class="section-tag">Who We Are</span>
+                        <h2 class="section-title">Committed to Humanity's Hardest Moments</h2>
+                    </div>
+                    <p class="mission-text">
+                        The Disaster Relief Foundation is committed to standing on the frontlines for families impacted by floods, fires, cyclones, earthquakes, and severe storms. We mobilize teams instantly to secure and restore human dignity when disasters shatter lives.
+                    </p>
+                    <div class="mission-features">
+                        <div class="mission-feature-item">
+                            <div class="mission-feature-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="mission-feature-title">Immediate Response</h4>
+                                <p class="mission-feature-desc">Failsafe teams deploy within hours of a major disaster notification.</p>
+                            </div>
+                        </div>
+                        <div class="mission-feature-item">
+                            <div class="mission-feature-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="mission-feature-title">Long-term Recovery</h4>
+                                <p class="mission-feature-desc">We stay past the news cycle, helping rebuild infrastructure and safety nets.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="about.html" class="btn btn-secondary">Learn More About Us</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. DISASTER RESPONSE PROGRAMS -->
+        <section class="section" aria-label="Our Programs">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">What We Do</span>
+                    <h2 class="section-title">Emergency Support Frameworks</h2>
+                    <p class="section-desc">Our response operations cover key pillars of humanitarian survival and rehabilitation.</p>
+                </div>
+                <div class="programs-grid">
+                    <!-- Card 1 -->
+                    <div class="program-card reveal">
+                        <div class="program-icon-bar">
+                            <div class="program-card-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                            </div>
+                        </div>
+                        <div class="program-card-body">
+                            <h3 class="program-card-title">Emergency Rescue</h3>
+                            <p class="program-card-desc">Ground and water rescue squads deploying to stranded communities during flood and weather disasters.</p>
+                            <a href="programs.html#rescue" class="program-card-link">
+                                Learn More 
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="program-card reveal">
+                        <div class="program-icon-bar">
+                            <div class="program-card-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                            </div>
+                        </div>
+                        <div class="program-card-body">
+                            <h3 class="program-card-title">Food & Clean Water</h3>
+                            <p class="program-card-desc">Immediate distribution of dry food supplies, warm meals, and water purification units to disaster zones.</p>
+                            <a href="programs.html#food-water" class="program-card-link">
+                                Learn More 
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="program-card reveal">
+                        <div class="program-icon-bar">
+                            <div class="program-card-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"/></svg>
+                            </div>
+                        </div>
+                        <div class="program-card-body">
+                            <h3 class="program-card-title">Medical Assistance</h3>
+                            <p class="program-card-desc">Mobile emergency clinics, trauma first-aid responders, and medicine transport to affected areas.</p>
+                            <a href="programs.html#medical" class="program-card-link">
+                                Learn More 
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="program-card reveal">
+                        <div class="program-icon-bar">
+                            <div class="program-card-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                            </div>
+                        </div>
+                        <div class="program-card-body">
+                            <h3 class="program-card-title">Temporary Shelters</h3>
+                            <p class="program-card-desc">Rapid assembly tents, sleeping kits, and transitional communal camps for displaced survivors.</p>
+                            <a href="programs.html#shelter" class="program-card-link">
+                                Learn More 
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="program-card reveal">
+                        <div class="program-icon-bar">
+                            <div class="program-card-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
+                            </div>
+                        </div>
+                        <div class="program-card-body">
+                            <h3 class="program-card-title">Emergency Supplies</h3>
+                            <p class="program-card-desc">Distribution of hygiene packs, warm clothing, solar lanterns, and utility tools for emergency survival.</p>
+                            <a href="programs.html#supplies" class="program-card-link">
+                                Learn More 
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="program-card reveal">
+                        <div class="program-icon-bar">
+                            <div class="program-card-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
+                            </div>
+                        </div>
+                        <div class="program-card-body">
+                            <h3 class="program-card-title">Community Recovery</h3>
+                            <p class="program-card-desc">Clearing debris, restoring public infrastructure, rebuilding schools, and organizing livelihood recovery.</p>
+                            <a href="programs.html#recovery" class="program-card-link">
+                                Learn More 
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. ACTIVE RELIEF OPERATIONS -->
+        <section class="section section-bg-white" aria-label="Active Relief Operations">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Active Missions</span>
+                    <h2 class="section-title">Emergency Mobilization Tracking</h2>
+                    <p class="section-desc">Real-time status of critical recovery deployments requiring community assistance.</p>
+                </div>
+                <div class="operations-grid">
+                    <!-- Op 1 -->
+                    <div class="operation-card reveal-left">
+                        <div class="operation-header">
+                            <span class="operation-badge">Critical Response</span>
+                            <span class="operation-stat-label">Active 4 days ago</span>
+                        </div>
+                        <h3 class="operation-title">Monsoon Floods Emergency</h3>
+                        <p class="operation-desc">Distributing rescue boats, clean water packets, and setting up emergency shelter tents in high-water rural sectors.</p>
+                        <div class="operation-progress-container">
+                            <div class="operation-progress-labels">
+                                <span>Support Goal: $120,000</span>
+                                <span>82% Funded</span>
+                            </div>
+                            <div class="operation-progress-bar">
+                                <div class="operation-progress-fill" data-progress="82%"></div>
+                            </div>
+                        </div>
+                        <div class="operation-stats-row">
+                            <div class="operation-stat-item">
+                                <span class="operation-stat-label">People Dispatched</span>
+                                <span class="operation-stat-val">120 Rescuers</span>
+                            </div>
+                            <div class="operation-stat-item">
+                                <span class="operation-stat-label">Supplies Distributed</span>
+                                <span class="operation-stat-val">15,000 Packs</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Op 2 -->
+                    <div class="operation-card reveal-right">
+                        <div class="operation-header">
+                            <span class="operation-badge">Critical Response</span>
+                            <span class="operation-stat-label">Active 12 days ago</span>
+                        </div>
+                        <h3 class="operation-title">Coastal Cyclone Rehabilitation</h3>
+                        <p class="operation-desc">Repairing damaged housing units, medical camps coordination, and installing solar micro-grids for storm-torn shore villages.</p>
+                        <div class="operation-progress-container">
+                            <div class="operation-progress-labels">
+                                <span>Support Goal: $250,000</span>
+                                <span>58% Funded</span>
+                            </div>
+                            <div class="operation-progress-bar">
+                                <div class="operation-progress-fill" data-progress="58%"></div>
+                            </div>
+                        </div>
+                        <div class="operation-stats-row">
+                            <div class="operation-stat-item">
+                                <span class="operation-stat-label">Reconstructed homes</span>
+                                <span class="operation-stat-val">48 Shelters</span>
+                            </div>
+                            <div class="operation-stat-item">
+                                <span class="operation-stat-label">Community centers</span>
+                                <span class="operation-stat-val">3 Restored</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Op 3 -->
+                    <div class="operation-card reveal-left">
+                        <div class="operation-header">
+                            <span class="operation-badge rehab">Rehabilitation</span>
+                            <span class="operation-stat-label">Active 30 days ago</span>
+                        </div>
+                        <h3 class="operation-title">Inland Fire Relief Campaign</h3>
+                        <p class="operation-desc">Providing food subsidies, temporary transitional housing cabins, and clothing relief packs for forest-fire victims.</p>
+                        <div class="operation-progress-container">
+                            <div class="operation-progress-labels">
+                                <span>Support Goal: $80,000</span>
+                                <span>94% Funded</span>
+                            </div>
+                            <div class="operation-progress-bar">
+                                <div class="operation-progress-fill" data-progress="94%"></div>
+                            </div>
+                        </div>
+                        <div class="operation-stats-row">
+                            <div class="operation-stat-item">
+                                <span class="operation-stat-label">Families Assisted</span>
+                                <span class="operation-stat-val">340 Families</span>
+                            </div>
+                            <div class="operation-stat-item">
+                                <span class="operation-stat-label">Health Screenings</span>
+                                <span class="operation-stat-val">1,200 Cases</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Op 4 -->
+                    <div class="operation-card reveal-right">
+                        <div class="operation-header">
+                            <span class="operation-badge rehab">Rehabilitation</span>
+                            <span class="operation-stat-label">Active 45 days ago</span>
+                        </div>
+                        <h3 class="operation-title">Earthquake Reconstruction</h3>
+                        <p class="operation-desc">Clearing massive mountain road blockages, structural testing for public schools, and livelihood assistance grants.</p>
+                        <div class="operation-progress-container">
+                            <div class="operation-progress-labels">
+                                <span>Support Goal: $300,000</span>
+                                <span>74% Funded</span>
+                            </div>
+                            <div class="operation-progress-bar">
+                                <div class="operation-progress-fill" data-progress="74%"></div>
+                            </div>
+                        </div>
+                        <div class="operation-stats-row">
+                            <div class="operation-stat-item">
+                                <span class="operation-stat-label">Schools Evaluated</span>
+                                <span class="operation-stat-val">12 Facilities</span>
+                            </div>
+                            <div class="operation-stat-item">
+                                <span class="operation-stat-label">Grants Distributed</span>
+                                <span class="operation-stat-val">$85,000 Paid</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. HOW WE HELP SECTION (TIMELINE) -->
+        <section class="section" aria-label="Operational Timeline">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Our Methodology</span>
+                    <h2 class="section-title">The Disaster Response Pipeline</h2>
+                    <p class="section-desc">A structured operational path guaranteeing transparency and maximum efficiency from impact to recovery.</p>
+                </div>
+                <div class="timeline">
+                    <!-- Step 1 -->
+                    <div class="timeline-item reveal-left">
+                        <div class="timeline-dot" aria-hidden="true"></div>
+                        <span class="timeline-badge">1</span>
+                        <div class="timeline-card">
+                            <h3 class="timeline-title">Assess</h3>
+                            <p class="timeline-desc">Within 6 hours of incident detection, we perform aerial assessments, dispatch drone trackers, and interface with local emergency dispatchers to map critical hotspots.</p>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="timeline-item reveal-right">
+                        <div class="timeline-dot" aria-hidden="true"></div>
+                        <span class="timeline-badge">2</span>
+                        <div class="timeline-card">
+                            <h3 class="timeline-title">Respond</h3>
+                            <p class="timeline-desc">Mobile response squads mobilize carrying life-saving equipment, first-aid support systems, clean water filtration bags, and instant foods.</p>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="timeline-item reveal-left">
+                        <div class="timeline-dot" aria-hidden="true"></div>
+                        <span class="timeline-badge">3</span>
+                        <div class="timeline-card">
+                            <h3 class="timeline-title">Support</h3>
+                            <p class="timeline-desc">We establish temporary operational camps providing psychological counseling, continuous hot meals, health diagnostics, and children support zones.</p>
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="timeline-item reveal-right">
+                        <div class="timeline-dot" aria-hidden="true"></div>
+                        <span class="timeline-badge">4</span>
+                        <div class="timeline-card">
+                            <h3 class="timeline-title">Rebuild</h3>
+                            <p class="timeline-desc">Collaborating with local building councils, we reconstruct school frameworks, repair critical water supplies, and distribute micro-grants to restore local economic stability.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. VOLUNTEER SECTION -->
+        <section class="section section-bg-white" aria-label="Volunteer Opportunities">
+            <div class="container">
+                <div class="volunteer-box reveal">
+                    <div class="volunteer-content">
+                        <h2>Step Forward. Save Lives.</h2>
+                        <p>Our volunteer squad forms the primary logistics engine of our disaster relief operations. Whether you are a trained rescue swimmer, medical expert, or community planner, your hands can help restore hope.</p>
+                        <a href="involved.html" class="btn btn-primary">Become a Volunteer</a>
+                    </div>
+                    <div class="volunteer-features-grid">
+                        <div class="volunteer-feat-card">
+                            <div class="volunteer-feat-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                            </div>
+                            <h3 class="volunteer-feat-title">Emergency Teams</h3>
+                            <p class="volunteer-feat-desc">Deploy in frontline boat rescues and storm support zones.</p>
+                        </div>
+                        <div class="volunteer-feat-card">
+                            <div class="volunteer-feat-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                            </div>
+                            <h3 class="volunteer-feat-title">Supply Logistics</h3>
+                            <p class="volunteer-feat-desc">Coordinate, package and sort emergency food crates at base camps.</p>
+                        </div>
+                        <div class="volunteer-feat-card">
+                            <div class="volunteer-feat-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+                            </div>
+                            <h3 class="volunteer-feat-title">Medical Reserves</h3>
+                            <p class="volunteer-feat-desc">Triage, trauma care, and psychological assistance during alerts.</p>
+                        </div>
+                        <div class="volunteer-feat-card">
+                            <div class="volunteer-feat-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+                            </div>
+                            <h3 class="volunteer-feat-title">Advocates</h3>
+                            <p class="volunteer-feat-desc">Raise crucial relief funds and coordinate corporate disaster pledges.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. STORIES OF HOPE (TESTIMONIALS SLIDER) -->
+        <section class="section" aria-label="Testimonials and stories of hope">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Impact Chronicles</span>
+                    <h2 class="section-title">Stories of Recovery and Resilience</h2>
+                    <p class="section-desc">True testimonies from community residents assisted by our rescue squads and donors.</p>
+                </div>
+                <div class="stories-slider-container reveal">
+                    <div class="stories-track">
+                        <!-- Slide 1 -->
+                        <div class="story-slide">
+                            <div class="story-card">
+                                <div class="story-avatar">
+                                    <img src="images/story_hope.webp" alt="Smiling local community member standing next to a rescue shelter" width="140" height="140" loading="lazy">
+                                </div>
+                                <div class="story-body">
+                                    <span class="story-quote-icon">“</span>
+                                    <p class="story-text">
+                                        The monsoon water reached our roofs within hours. Stackly's inflatable boats extracted my entire family safely. The food crates and medicine they brought afterward helped us survive the hardest days. Today, my shop is open again.
+                                    </p>
+                                    <h4 class="story-author">David K. &amp; Family</h4>
+                                    <span class="story-meta">Flood Survivor, Riverine Valley Sector</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="story-slide">
+                            <div class="story-card">
+                                <div class="story-avatar">
+                                    <img src="images/story_hope.webp" alt="Smiling resident standing in front of reconstructed school facility" width="140" height="140" loading="lazy">
+                                </div>
+                                <div class="story-body">
+                                    <span class="story-quote-icon">“</span>
+                                    <p class="story-text">
+                                        After the category-5 cyclone shattered our school house, we thought our kids would lose months of education. Stackly builders arrived with structural panels and set up modular classrooms in 10 days. They are true lifesavers.
+                                    </p>
+                                    <h4 class="story-author">Elena Rostova</h4>
+                                    <span class="story-meta">Primary School Teacher, Coastal Region</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide Navigation Dots (populated by main.js) -->
+                    <div class="slider-nav"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. FINAL DONATION CTA -->
+        <section class="final-cta" aria-label="Call to action section">
+            <div class="container reveal">
+                <h2 class="final-cta-title">Your Support Can Help Someone Rebuild.</h2>
+                <p class="final-cta-desc">
+                    Every minute counts in a disaster response window. Join us as a donor, volunteer, or advocate today and bring urgent relief to a family in crisis.
+                </p>
+                <div class="final-cta-btns">
+                    <a href="donate.html" class="btn btn-primary">Donate Now</a>
+                    <a href="involved.html" class="btn btn-outline-white">Become a Volunteer</a>
+                    <a href="contact.html" class="btn btn-outline-white">Contact Foundation</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1 -->
+                <div class="footer-col-brand">
+                    <a href="index.html" class="logo" style="margin-bottom: 20px; display: inline-flex;" aria-label="Disaster Relief Foundation Home">
+                        <img src="images/logo.webp" alt="Stackly Logo" style="height: 38px; width: auto; object-fit: contain;">
+                    </a>
+                    <p>Mobilizing rapid rescue operations, humanitarian resources, food security grids, and community reconstruction projects for disaster zones.</p>
+                    <div class="contact-socials" style="margin-top: 20px; padding-top: 0; border: none; display: flex; gap: 10px;">
+                        <a href="404.html" class="social-circle" aria-label="Facebook Link">
+                            <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: currentColor;"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.8v8.37h2.8v-4.87c0-.26.05-.53.13-.72a1.37 1.37 0 0 1 1.25-.92c.67 0 1.24.55 1.24 1.33v5.18h2.96z"/></svg>
+                        </a>
+                        <a href="404.html" class="social-circle" aria-label="Twitter Link">
+                            <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: currentColor;"><path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.7 0-1.37-.2-1.95-.53v.05c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.6 8.6 0 0 1-5.36 1.85c-.35 0-.69-.02-1.03-.06C2.92 20.29 5.3 21 7.8 21c9.38 0 14.5-7.77 14.5-14.5 0-.22 0-.44-.01-.66.99-.73 1.86-1.64 2.54-2.68z"/></svg>
+                        </a>
+                        <a href="404.html" class="social-circle" aria-label="Instagram Link">
+                            <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: currentColor;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                        </a>
+                        <a href="404.html" class="social-circle" aria-label="YouTube Link">
+                            <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: currentColor;"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.518 3.545 12 3.545 12 3.545s-7.518 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.87.508 9.388.508 9.388.508s7.518 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- Col 2 -->
+                <div>
+                    <h3 class="footer-col-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About NGO</a></li>
+                        <li><a href="programs.html">Active Programs</a></li>
+                        <li><a href="response.html">Disaster Response</a></li>
+                        <li><a href="involved.html">Get Involved</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Col 3 -->
+                <div>
+                    <h3 class="footer-col-title">Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact Coordinates</a></li>
+                        <li><a href="404.html">Terms &amp; Agreements</a></li>
+                        <li><a href="404.html">Security Audits</a></li>
+                    </ul>
+                </div>
+                <!-- Col 4 -->
+                <div>
+                    <h3 class="footer-col-title">Newsletter</h3>
+                    <p style="color: #A8B2D1; font-size: 0.9rem; margin-bottom: 20px; line-height: 1.5;">
+                        Get quarterly emergency updates, volunteer alerts, and relief operations reports.
+                    </p>
+                    <form id="footer-newsletter-form" style="display: flex; gap: 8px;">
+                        <input type="email" placeholder="Your Email" style="flex-grow: 1; padding: 10px 14px; border-radius: var(--radius-sm); border: 1px solid rgba(255, 255, 255, 0.1); background-color: rgba(0, 0, 0, 0.2); color: white; font-size: 0.9rem;" required>
+                        <button type="submit" class="btn btn-primary btn-sm" style="padding: 10px 20px; border-radius: var(--radius-sm);">Join</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Stackly. All rights reserved. Designed for emergency relief.</p>
+                <div class="footer-bottom-links">
+                    <a href="404.html">Privacy Policy</a>
+                    <a href="404.html">Terms of Service</a>
+                    <a href="404.html">Security Audits</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js?v=2.0"></script>
+</body>
+</html>
