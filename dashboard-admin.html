@@ -5,70 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Stackly Administrative Command Center dashboard.">
     <title>Admin Dashboard | Stackly</title>
-    <link rel="stylesheet" href="css/style.css?v=2.1">
+    <link rel="stylesheet" href="css/style.css?v=3.7">
 </head>
 <body>
 
-    <!-- STICKY NAVBAR (Minimalist style for Admin) -->
-    <header class="header">
-        <div class="container">
-            <a href="index.html" class="logo" aria-label="Disaster Relief Foundation Home">
-                <img src="images/logo.webp" alt="Stackly Logo" style="height: 38px; width: auto; object-fit: contain;">
-                <span style="font-size: 0.95rem; font-weight: 600; color: var(--color-text-muted); margin-left: 5px;">HQ</span>
-            </a>
-            
-            <div class="dashboard-user-card">
-                <div class="dashboard-avatar" style="background-color: var(--color-primary-light);">HQ</div>
-                <div class="dashboard-user-info">
-                    <h4>Admin Coord</h4>
-                    <span>System Administrator</span>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <div class="dashboard-wrapper">
+    <div class="dashboard-wrapper dashboard-dark-layout">
         <!-- Sidebar Navigation -->
         <aside class="sidebar">
-            <ul class="sidebar-menu">
-                <li>
-                    <a href="#" class="sidebar-item active" data-tab="overview">
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
-                        <span>Command Overview</span>
+            <div>
+                <div class="sidebar-brand" style="margin-bottom: 24px; padding: 10px 16px;">
+                    <a href="dashboard-admin.html" class="logo" aria-label="Admin Dashboard" style="display: flex; align-items: center; text-decoration: none; gap: 8px;">
+                        <img src="images/logo.webp" alt="Stackly Logo" style="height: 42px; width: auto; filter: invert(1);">
                     </a>
-                </li>
-                <li>
-                    <a href="#" class="sidebar-item" data-tab="volunteers">
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 5.42 5 8.5s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
-                        <span>Volunteers Desk</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="sidebar-item" data-tab="donations">
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                        <span>Donor Records</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="sidebar-item" data-tab="programs">
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
-                        <span>Program Control</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="sidebar-item" data-tab="messages">
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                        <span>Message Desk</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="sidebar-item" data-tab="settings">
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3-1.57-3-3.5s1.07-3.5 3-3.5 3 1.57 3 3.5-1.07 3.5-3 3.5z"/></svg>
-                        <span>HQ Config</span>
-                    </a>
-                </li>
-            </ul>
-            <a href="index.html" class="sidebar-item" style="margin-top: auto; color: var(--color-danger);">
+                </div>
+                
+                <div class="sidebar-profile" style="display: flex; align-items: center; gap: 12px; padding: 10px 16px; margin-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 24px;">
+                    <div style="position: relative; width: 40px; height: 40px; border-radius: 50%; overflow: hidden; border: 2px solid #00E676; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background-color: var(--color-primary-light);">
+                        <img src="images/story_hope.jpg" alt="Avatar" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div style="position: absolute; bottom: 0; right: 0; width: 10px; height: 10px; border-radius: 50%; background-color: #00E676; border: 2px solid #0c231a;"></div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; overflow: hidden;">
+                        <span style="font-size: 0.85rem; font-weight: 700; color: white; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">kappalasuresh92@gmail.com</span>
+                        <span style="font-size: 0.75rem; color: rgba(255,255,255,0.5);">Developer / Engineer</span>
+                    </div>
+                </div>
+
+                <ul class="sidebar-menu" style="margin-top: 0;">
+                    <li>
+                        <a href="#" class="sidebar-item active" data-tab="overview">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-8 12c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/></svg>
+                            <span>API &amp; Webhooks</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="sidebar-item" data-tab="volunteers">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+                            <span>Bucket Clusters</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="sidebar-item" data-tab="donations">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                            <span>API Access Tokens</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="sidebar-item" data-tab="portal">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                            <span>Main Portal</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <a href="login.html" class="sidebar-item" style="color: var(--color-danger); margin-top: auto;">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.09 15.59L11.5 17l5-5-5-5-1.41 1.41L12.67 11H3v2h9.67l-2.58 2.59zM19 3H5c-1.11 0-2 .9-2 2v4h2V5h14v14H5v-4H3v4c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg>
                 <span>Logout</span>
             </a>
@@ -81,113 +71,152 @@
             <div id="panel-overview" class="dashboard-panel">
                 <div class="dashboard-header">
                     <div class="dashboard-title">
-                        <h2>HQ Tactical Overview</h2>
-                        <p>Command statistics for system-wide volunteer teams and relief capital.</p>
+                        <h2>Developer Console / API &amp; Webhooks</h2>
                     </div>
                 </div>
                 
-                <!-- Metric Cards -->
-                <div class="dashboard-grid">
-                    <div class="dashboard-card">
-                        <div class="dashboard-card-icon success" aria-hidden="true">
-                            <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                        </div>
-                        <div class="dashboard-card-details">
-                            <span>Total Donations</span>
-                            <h3>$84,200</h3>
-                        </div>
-                    </div>
-                    <div class="dashboard-card">
-                        <div class="dashboard-card-icon primary" aria-hidden="true">
-                            <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                        </div>
-                        <div class="dashboard-card-details">
-                            <span>Volunteers Standby</span>
-                            <h3 id="count-active-volunteers">8,750</h3>
-                        </div>
-                    </div>
-                    <div class="dashboard-card">
-                        <div class="dashboard-card-icon blue" aria-hidden="true">
-                            <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 5.42 5 8.5s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
-                        </div>
-                        <div class="dashboard-card-details">
-                            <span>People Assisted</span>
-                            <h3>154,200</h3>
-                        </div>
-                    </div>
-                    <div class="dashboard-card">
-                        <div class="dashboard-card-icon accent" aria-hidden="true">
-                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-                        </div>
-                        <div class="dashboard-card-details">
-                            <span>Active Deployments</span>
-                            <h3>4 Missions</h3>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Donation line chart -->
-                <div class="dashboard-content-split">
-                    <div class="dashboard-content-card">
-                        <div class="dashboard-card-header">
-                            <h3>Cumulative Donations Trend (2026)</h3>
-                            <span style="font-size: 0.8rem; color: var(--color-text-muted);">Amounts in thousands (USD)</span>
-                        </div>
-                        <div class="chart-container">
-                            <svg id="svg-donations-chart" class="svg-chart"></svg>
-                        </div>
-                    </div>
+                <!-- Main Console Layout Grid -->
+                <div class="console-row">
                     
-                    <div class="dashboard-content-card">
-                        <div class="dashboard-card-header">
-                            <h3>Urgent Resource Alerts</h3>
+                    <!-- Left Column (Main Console Modules) -->
+                    <div class="console-main-col">
+                        
+                        <!-- Top 3 Metric Cards Grid -->
+                        <div class="console-metrics-grid">
+                            <!-- Card 1 -->
+                            <div class="dashboard-card" style="padding: 20px;">
+                                <span style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: var(--color-text-muted);">API Request Volume</span>
+                                <h3 style="font-size: 1.8rem; margin: 10px 0; color: white;">14,562 / 20k</h3>
+                                <div class="progress-bar" style="height: 6px; margin-bottom: 8px;">
+                                    <div class="progress-fill" style="width: 72.8%;"></div>
+                                </div>
+                                <span style="font-size: 0.75rem; color: var(--color-text-muted);">SLA Rate limit: <strong style="color: #00E676;">72.8% consumed</strong></span>
+                            </div>
+                            
+                            <!-- Card 2 -->
+                            <div class="dashboard-card" style="padding: 20px;">
+                                <span style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: var(--color-text-muted);">Webhook Delivery SLA</span>
+                                <h3 style="font-size: 1.8rem; margin: 10px 0; color: white;">99.98%</h3>
+                                <div class="progress-bar" style="height: 6px; margin-bottom: 8px;">
+                                    <div class="progress-fill" style="width: 99.98%;"></div>
+                                </div>
+                                <span style="font-size: 0.75rem; color: var(--color-text-muted);">Failed retries: <strong style="color: #00E676;">0 transactions</strong></span>
+                            </div>
+                            
+                            <!-- Card 3 -->
+                            <div class="dashboard-card" style="padding: 20px;">
+                                <span style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: var(--color-text-muted);">Decryption Overhead</span>
+                                <h3 style="font-size: 1.8rem; margin: 10px 0; color: white;">4.2ms</h3>
+                                <div class="progress-bar" style="height: 6px; margin-bottom: 8px;">
+                                    <div class="progress-fill" style="width: 42%;"></div>
+                                </div>
+                                <span style="font-size: 0.75rem; color: var(--color-text-muted);">Cipher standard: <strong style="color: #00E676;">AES-GCM-256 optimized</strong></span>
+                            </div>
                         </div>
-                        <ul class="transparency-list" style="padding-left: 0;">
-                            <li style="color: var(--color-text-dark); margin-bottom: 12px; border-left: 3px solid var(--color-danger); padding-left: 10px;">
-                                <strong>Water Purification Systems</strong><br>
-                                <span style="font-size: 0.8rem; color: var(--color-text-muted);">Stock low at Camp B (Monsoon sector). Needs 20 crates.</span>
-                            </li>
-                            <li style="color: var(--color-text-dark); margin-bottom: 12px; border-left: 3px solid var(--color-secondary); padding-left: 10px;">
-                                <strong>Standby Volunteers</strong><br>
-                                <span style="font-size: 0.8rem; color: var(--color-text-muted);">6 coastal alerts triggered. Volunteers dispatch requested.</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
 
-                <!-- Recent Registrations -->
-                <div class="dashboard-content-card">
-                    <div class="dashboard-card-header">
-                        <h3>Newest Volunteer Signups</h3>
+                        <!-- Middle Card: Active Operations -->
+                        <div class="dashboard-card" style="padding: 20px; display: flex; flex-direction: column; justify-content: center; min-height: 140px;">
+                            <span style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: var(--color-text-muted);">Active Clusters</span>
+                            <h3 style="font-size: 2.2rem; margin: 10px 0; color: white;">5 Nodes</h3>
+                            <div class="progress-bar" style="height: 8px; margin-bottom: 10px; width: 60%;">
+                                <div class="progress-fill" style="width: 100%;"></div>
+                            </div>
+                            <span style="font-size: 0.8rem; color: var(--color-text-muted);">Consensus status: <strong style="color: #00E676;">Replicating active</strong></span>
+                        </div>
+
+                        <!-- Bottom Area: Registered Webhook Endpoints table -->
+                        <div class="dashboard-card" style="padding: 20px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                                <h3 style="font-size: 1.1rem; color: white;">Registered Webhook Endpoints</h3>
+                                <button class="btn btn-primary btn-sm" style="font-size: 0.75rem; padding: 6px 12px;">Add Endpoint</button>
+                            </div>
+                            <div class="table-wrapper" style="overflow-x: auto;">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Target URL</th>
+                                            <th>Status</th>
+                                            <th>Response Code</th>
+                                            <th>Created</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>http://api.stackly.io/v1/webhooks/receiver-1</td>
+                                            <td><span class="status-badge active">ACTIVE</span></td>
+                                            <td><code>200 OK</code></td>
+                                            <td>Just now</td>
+                                        </tr>
+                                        <tr>
+                                            <td>http://api.stackly.io/v1/webhooks/receiver-2</td>
+                                            <td><span class="status-badge active">ACTIVE</span></td>
+                                            <td><code>200 OK</code></td>
+                                            <td>10 mins ago</td>
+                                        </tr>
+                                        <tr>
+                                            <td>http://api.stackly.io/v1/webhooks/receiver-3</td>
+                                            <td><span class="status-badge active">ACTIVE</span></td>
+                                            <td><code>200 OK</code></td>
+                                            <td>1 hour ago</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="table-wrapper">
-                        <table class="db-table" aria-label="Recent Volunteer Signups">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Specialty Selected</th>
-                                    <th scope="col">Availability</th>
-                                    <th scope="col">Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Richard Harris</td>
-                                    <td>richard.h@example.com</td>
-                                    <td>Emergency Frontline Rescue</td>
-                                    <td>On-Call Alerts</td>
-                                    <td><span class="status-badge pending">Pending Approval</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Sarah Jenkins</td>
-                                    <td>sarah.j@example.com</td>
-                                    <td>Medical Camps &amp; First Aid</td>
-                                    <td>Weekends</td>
-                                    <td><span class="status-badge pending">Pending Approval</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+
+                    <!-- Right Column (Sidebar Modules) -->
+                    <div class="console-side-col">
+                        
+                        <!-- Side Module 1: API Quota -->
+                        <div class="dashboard-card" style="padding: 20px;">
+                            <h3 style="font-size: 1rem; color: white; display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                                <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: #00E676;"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+                                API Quota
+                            </h3>
+                            <span style="font-size: 0.8rem; color: var(--color-text-muted);">API Request Rate</span>
+                            <div style="display: flex; justify-content: space-between; margin: 8px 0; font-weight: 600;">
+                                <span>Rate Limit</span>
+                                <span style="color: #00E676;">2,450 / 10,000</span>
+                            </div>
+                            <div class="progress-bar" style="height: 6px;">
+                                <div class="progress-fill" style="width: 24.5%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Side Module 2: Region Latency -->
+                        <div class="dashboard-card" style="padding: 20px;">
+                            <h3 style="font-size: 1rem; color: white; display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                                <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: #00E676;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                                Region Latency
+                            </h3>
+                            <div style="display: flex; flex-direction: column; gap: 10px;">
+                                <div style="display: flex; justify-content: space-between; font-size: 0.85rem;">
+                                    <span>US-West (Oregon)</span>
+                                    <span style="color: #00E676; font-weight: 600;">12ms</span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; font-size: 0.85rem;">
+                                    <span>EU-Central (Frankfurt)</span>
+                                    <span style="color: #00E676; font-weight: 600;">18ms</span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; font-size: 0.85rem;">
+                                    <span>Asia-East (Tokyo)</span>
+                                    <span style="color: #00E676; font-weight: 600;">24ms</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Side Module 3: Live Webhook Simulator -->
+                        <div class="dashboard-card" style="padding: 20px;">
+                            <h3 style="font-size: 1rem; color: white; margin-bottom: 12px;">Live Webhook Simulator</h3>
+                            <span style="font-size: 0.8rem; color: var(--color-text-muted); display: block; margin-bottom: 8px;">Test Destination URL:</span>
+                            <div style="display: flex; flex-direction: column; gap: 10px;">
+                                <input type="text" class="form-control" placeholder="http://destination.com/webhook" style="font-size: 0.8rem; padding: 8px 12px;">
+                                <button class="btn btn-primary btn-sm" onclick="alert('Simulation webhook dispatch triggered successfully!')" style="width: 100%; font-size: 0.8rem; padding: 8px 12px;">Test Webhook</button>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -196,48 +225,48 @@
             <div id="panel-volunteers" class="dashboard-panel" style="display: none;">
                 <div class="dashboard-header">
                     <div class="dashboard-title">
-                        <h2>Volunteer Management Desk</h2>
-                        <p>Approve applications, adjust assignments, and review credentials.</p>
+                        <h2>Bucket Clusters Desk</h2>
+                        <p>Manage S3-compatible cloud storage bucket clusters, replication nodes, and data storage classes.</p>
                     </div>
                 </div>
                 
-                <div class="dashboard-content-card">
+                <div class="dashboard-content-card" style="padding: 20px;">
                     <div class="table-wrapper">
-                        <table class="db-table" aria-label="Volunteers Management Table">
+                        <table class="db-table" aria-label="Bucket Clusters Table">
                             <thead>
                                 <tr>
-                                    <th scope="col">Volunteer Name</th>
-                                    <th scope="col">Email Address</th>
-                                    <th scope="col">Contact</th>
-                                    <th scope="col">Operational Field</th>
-                                    <th scope="col">Status</th>
+                                    <th scope="col">Cluster Name</th>
+                                    <th scope="col">Region / Zone</th>
+                                    <th scope="col">Replication Status</th>
+                                    <th scope="col">Data Size</th>
+                                    <th scope="col">Nodes</th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Richard Harris</td>
-                                    <td>richard.h@example.com</td>
-                                    <td>5550212</td>
-                                    <td>Emergency Frontline Rescue</td>
-                                    <td><span class="status-badge pending">Pending</span></td>
-                                    <td><button class="btn btn-primary btn-sm btn-approve-volunteer">Approve</button></td>
+                                    <td>storage-bucket-us-east</td>
+                                    <td>us-west-1</td>
+                                    <td><span class="status-badge completed">ACTIVE</span></td>
+                                    <td>1.4 TB</td>
+                                    <td>3 Nodes</td>
+                                    <td><button class="btn btn-primary btn-sm">Manage</button></td>
                                 </tr>
                                 <tr>
-                                    <td>Sarah Jenkins</td>
-                                    <td>sarah.j@example.com</td>
-                                    <td>5550219</td>
-                                    <td>Medical Camps &amp; First Aid</td>
-                                    <td><span class="status-badge pending">Pending</span></td>
-                                    <td><button class="btn btn-primary btn-sm btn-approve-volunteer">Approve</button></td>
+                                    <td>storage-bucket-eu-central</td>
+                                    <td>eu-central-1</td>
+                                    <td><span class="status-badge completed">ACTIVE</span></td>
+                                    <td>820 GB</td>
+                                    <td>2 Nodes</td>
+                                    <td><button class="btn btn-primary btn-sm">Manage</button></td>
                                 </tr>
                                 <tr>
-                                    <td>Michael Chang</td>
-                                    <td>m.chang@example.com</td>
-                                    <td>5550183</td>
-                                    <td>Supply &amp; Food Logistics</td>
-                                    <td><span class="status-badge success">Approved</span></td>
-                                    <td><button class="btn btn-secondary btn-sm" disabled style="background-color: var(--color-success); border-color: var(--color-success); color: white;">Approved</button></td>
+                                    <td>storage-bucket-ap-northeast</td>
+                                    <td>ap-northeast-1</td>
+                                    <td><span class="status-badge pending">REPLICATING</span></td>
+                                    <td>450 GB</td>
+                                    <td>2 Nodes</td>
+                                    <td><button class="btn btn-primary btn-sm">Manage</button></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -249,57 +278,49 @@
             <div id="panel-donations" class="dashboard-panel" style="display: none;">
                 <div class="dashboard-header">
                     <div class="dashboard-title">
-                        <h2>System Donation Ledger</h2>
-                        <p>Real-time audit log of all financial allocations to the foundation.</p>
+                        <h2>API Access Tokens Desk</h2>
+                        <p>Manage authentication tokens, secret keys, and scope permissions for API endpoints.</p>
                     </div>
-                    <button class="btn btn-secondary btn-sm">Export CSV Ledger</button>
+                    <button class="btn btn-primary btn-sm">Generate New Token</button>
                 </div>
                 
-                <div class="dashboard-content-card">
+                <div class="dashboard-content-card" style="padding: 20px;">
                     <div class="table-wrapper">
-                        <table class="db-table" aria-label="Global Donations Ledger">
+                        <table class="db-table" aria-label="API Access Tokens Table">
                             <thead>
                                 <tr>
-                                    <th scope="col">Transaction ID</th>
-                                    <th scope="col">Donor Name</th>
-                                    <th scope="col">Email Address</th>
-                                    <th scope="col">Allocation Project</th>
-                                    <th scope="col">Amount</th>
+                                    <th scope="col">Token Name</th>
+                                    <th scope="col">Key Prefix</th>
+                                    <th scope="col">Scope / Permissions</th>
                                     <th scope="col">Status</th>
+                                    <th scope="col">Created Date</th>
+                                    <th scope="col">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>#TXN-98431</td>
-                                    <td>John Doe</td>
-                                    <td>john@example.com</td>
-                                    <td>Monsoon Floods Emergency Response</td>
-                                    <td><strong>$120.00</strong></td>
-                                    <td><span class="status-badge success">Success</span></td>
+                                    <td>EOC Production Push Key</td>
+                                    <td><code>stk_live_prod_b8431...</code></td>
+                                    <td><code>write:dispatches</code></td>
+                                    <td><span class="status-badge completed">ACTIVE</span></td>
+                                    <td>Jul 10, 2026</td>
+                                    <td><button class="btn btn-secondary btn-sm" style="color: var(--color-danger); border-color: rgba(230,57,70,0.3);">Revoke</button></td>
                                 </tr>
                                 <tr>
-                                    <td>#TXN-98430</td>
-                                    <td>Emily Watson</td>
-                                    <td>emily@example.com</td>
-                                    <td>Medical First-Aid Camps</td>
-                                    <td><strong>$500.00</strong></td>
-                                    <td><span class="status-badge success">Success</span></td>
+                                    <td>Public Map Overlay Key</td>
+                                    <td><code>stk_pub_map_98430...</code></td>
+                                    <td><code>read:operations</code></td>
+                                    <td><span class="status-badge completed">ACTIVE</span></td>
+                                    <td>May 24, 2026</td>
+                                    <td><button class="btn btn-secondary btn-sm" style="color: var(--color-danger); border-color: rgba(230,57,70,0.3);">Revoke</button></td>
                                 </tr>
                                 <tr>
-                                    <td>#TXN-98429</td>
-                                    <td>Apex Corp CSR</td>
-                                    <td>csr@apexcorp.com</td>
-                                    <td>Temporary Shelters &amp; Blankets</td>
-                                    <td><strong>$5,000.00</strong></td>
-                                    <td><span class="status-badge success">Success</span></td>
-                                </tr>
-                                <tr>
-                                    <td>#TXN-98428</td>
-                                    <td>Robert Vance</td>
-                                    <td>vance@example.com</td>
-                                    <td>General Relief Fund</td>
-                                    <td><strong>$50.00</strong></td>
-                                    <td><span class="status-badge success">Success</span></td>
+                                    <td>Analytics Integrator Key</td>
+                                    <td><code>stk_test_anal_98429...</code></td>
+                                    <td><code>read:all</code></td>
+                                    <td><span class="status-badge pending" style="color: #FFB300 !important; border-color: rgba(255,179,0,0.3) !important; background-color: rgba(255,179,0,0.1) !important;">EXPIRED</span></td>
+                                    <td>Jan 15, 2026</td>
+                                    <td><button class="btn btn-secondary btn-sm" style="color: var(--color-danger); border-color: rgba(230,57,70,0.3);">Revoke</button></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -420,6 +441,85 @@
                         </div>
                         <button type="submit" class="btn btn-primary" style="margin-top: 15px;">Save Config Settings</button>
                     </form>
+                </div>
+            </div>
+            
+            <!-- PANEL: MAIN PORTAL -->
+            <div id="panel-portal" class="dashboard-panel" style="display: none;">
+                <div class="dashboard-header">
+                    <div class="dashboard-title">
+                        <h2>Main Infrastructure Portal</h2>
+                        <p>Consolidated infrastructure status, main web domain telemetry, and gateway server loads.</p>
+                    </div>
+                </div>
+                
+                <div class="console-row">
+                    <div class="console-main-col">
+                        <div class="console-metrics-grid">
+                            <div class="dashboard-card" style="padding: 20px;">
+                                <span style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: var(--color-text-muted);">Main Website Status</span>
+                                <h3 style="font-size: 1.8rem; margin: 10px 0; color: #00E676;">ONLINE</h3>
+                                <span style="font-size: 0.75rem; color: var(--color-text-muted);">Response: <strong style="color: #00E676;">100% active</strong></span>
+                            </div>
+                            <div class="dashboard-card" style="padding: 20px;">
+                                <span style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: var(--color-text-muted);">Gateway Request Rate</span>
+                                <h3 style="font-size: 1.8rem; margin: 10px 0; color: white;">4,210 req/s</h3>
+                                <span style="font-size: 0.75rem; color: var(--color-text-muted);">Average latency: <strong style="color: #00E676;">8.5ms</strong></span>
+                            </div>
+                            <div class="dashboard-card" style="padding: 20px;">
+                                <span style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: var(--color-text-muted);">Global CDNs</span>
+                                <h3 style="font-size: 1.8rem; margin: 10px 0; color: white;">99.99%</h3>
+                                <span style="font-size: 0.75rem; color: var(--color-text-muted);">CDN integrity: <strong style="color: #00E676;">Stable</strong></span>
+                            </div>
+                        </div>
+                        
+                        <div class="dashboard-card" style="padding: 20px;">
+                            <h3 style="font-size: 1.1rem; color: white; margin-bottom: 15px;">System Gateway Nodes</h3>
+                            <div class="table-wrapper">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Server Node</th>
+                                            <th>Zone</th>
+                                            <th>Load Level</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>primary-gateway-01</td>
+                                            <td>us-east-1a</td>
+                                            <td><strong>24%</strong></td>
+                                            <td><span class="status-badge completed">Success</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>backup-gateway-02</td>
+                                            <td>us-west-2b</td>
+                                            <td><strong>12%</strong></td>
+                                            <td><span class="status-badge completed">Success</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>edge-node-eu-01</td>
+                                            <td>eu-west-1c</td>
+                                            <td><strong>48%</strong></td>
+                                            <td><span class="status-badge completed">Success</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="console-side-col">
+                        <div class="dashboard-card" style="padding: 20px;">
+                            <h3 style="font-size: 1rem; color: white; margin-bottom: 12px;">Quick Telemetry Actions</h3>
+                            <div style="display: flex; flex-direction: column; gap: 10px;">
+                                <a href="index.html" class="btn btn-primary btn-sm" style="text-decoration: none; text-align: center;">View Home Landing Page</a>
+                                <a href="about.html" class="btn btn-secondary btn-sm" style="text-decoration: none; text-align: center; color: white; border-color: rgba(255,255,255,0.15);">View About Portal</a>
+                                <a href="contact.html" class="btn btn-secondary btn-sm" style="text-decoration: none; text-align: center; color: white; border-color: rgba(255,255,255,0.15);">View Help Desk</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             

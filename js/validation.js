@@ -176,7 +176,7 @@ function initFormValidators() {
             }
         });
         
-        // Add real-time field validation on blur / change
+        // Add real-time field validation on input, blur, and change
         const inputs = form.querySelectorAll('input, select, textarea');
         inputs.forEach(input => {
             ['blur', 'change'].forEach(evt => {
@@ -188,6 +188,35 @@ function initFormValidators() {
                         clearError(input);
                     }
                 });
+            });
+
+            // Smart real-time validation on typing
+            input.addEventListener('input', () => {
+                const name = input.name || input.id || '';
+                const isPasswordType = input.type === 'password' || name.includes('password');
+                
+                // If already marked invalid, or if typing in password/confirm-password fields, validate instantly
+                if (input.classList.contains('is-invalid') || isPasswordType) {
+                    const error = validateField(input, form);
+                    if (error) {
+                        showError(input, error);
+                    } else {
+                        clearError(input);
+                    }
+                    
+                    // Cross-input validation: If editing primary password, update confirm-password validation if it was already filled
+                    if (name === 'password') {
+                        const confirmInput = form.querySelector('input[name="confirm-password"], input[id="confirm-password"], input[name="confirm_password"]');
+                        if (confirmInput && (confirmInput.value !== '' || confirmInput.classList.contains('is-invalid'))) {
+                            const confirmError = validateField(confirmInput, form);
+                            if (confirmError) {
+                                showError(confirmInput, confirmError);
+                            } else {
+                                clearError(confirmInput);
+                            }
+                        }
+                    }
+                }
             });
         });
     });

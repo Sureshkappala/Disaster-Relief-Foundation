@@ -5,58 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Manage your Stackly donor contributions, volunteer logs, and settings.">
     <title>Member Dashboard | Stackly</title>
-    <link rel="stylesheet" href="css/style.css?v=2.1">
+    <link rel="stylesheet" href="css/style.css?v=3.7">
 </head>
 <body>
 
-    <!-- STICKY NAVBAR (Minimalist style for dashboard) -->
-    <header class="header">
-        <div class="container">
-            <a href="index.html" class="logo" aria-label="Disaster Relief Foundation Home">
-                <img src="images/logo.webp" alt="Stackly Logo" style="height: 38px; width: auto; object-fit: contain;">
-                <span style="font-size: 0.95rem; font-weight: 600; color: var(--color-text-muted); margin-left: 5px;">Portal</span>
-            </a>
-            
-            <div class="dashboard-user-card">
-                <div class="dashboard-avatar">JD</div>
-                <div class="dashboard-user-info">
-                    <h4>John Doe</h4>
-                    <span>Donor &amp; Volunteer</span>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <div class="dashboard-wrapper">
+    <div class="dashboard-wrapper dashboard-dark-layout">
         <!-- Sidebar Navigation -->
         <aside class="sidebar">
-            <ul class="sidebar-menu">
-                <li>
-                    <a href="#" class="sidebar-item active" data-tab="overview">
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
-                        <span>Overview</span>
+            <div>
+                <div class="sidebar-brand" style="margin-bottom: 24px; padding: 10px 16px;">
+                    <a href="dashboard-user.html" class="logo" aria-label="User Dashboard" style="display: flex; align-items: center; text-decoration: none; gap: 8px;">
+                        <img src="images/logo.webp" alt="Stackly Logo" style="height: 42px; width: auto; filter: invert(1);">
                     </a>
-                </li>
-                <li>
-                    <a href="#" class="sidebar-item" data-tab="donations">
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                        <span>Donations Log</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="sidebar-item" data-tab="volunteering">
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 5.42 5 8.5s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
-                        <span>Volunteering</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="sidebar-item" data-tab="settings">
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3-1.57-3-3.5s1.07-3.5 3-3.5 3 1.57 3 3.5-1.07 3.5-3 3.5z"/></svg>
-                        <span>Profile Settings</span>
-                    </a>
-                </li>
-            </ul>
-            <a href="index.html" class="sidebar-item" style="margin-top: auto; color: var(--color-danger);">
+                </div>
+                
+                <div class="sidebar-profile" style="display: flex; align-items: center; gap: 12px; padding: 10px 16px; margin-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 24px;">
+                    <div style="position: relative; width: 40px; height: 40px; border-radius: 50%; overflow: hidden; border: 2px solid #00E676; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background-color: var(--color-primary-light);">
+                        <img src="images/story_hope.jpg" alt="Avatar" style="width: 100%; height: 100%; object-fit: cover;">
+                        <div style="position: absolute; bottom: 0; right: 0; width: 10px; height: 10px; border-radius: 50%; background-color: #00E676; border: 2px solid #0c231a;"></div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; overflow: hidden;">
+                        <span style="font-size: 0.85rem; font-weight: 700; color: white; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">kappalasuresh92@gmail.com</span>
+                        <span style="font-size: 0.75rem; color: rgba(255,255,255,0.5);">Client / Requester</span>
+                    </div>
+                </div>
+
+                <ul class="sidebar-menu" style="margin-top: 0;">
+                    <li>
+                        <a href="#" class="sidebar-item active" data-tab="overview">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                            <span>Aid &amp; Rescue Requests</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="sidebar-item" data-tab="volunteering">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-8 12c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/></svg>
+                            <span>Active Dispatches</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="sidebar-item" data-tab="donations">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                            <span>Help Center</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="sidebar-item" data-tab="portal">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                            <span>Main Portal</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <a href="login.html" class="sidebar-item" style="color: var(--color-danger); margin-top: auto;">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.09 15.59L11.5 17l5-5-5-5-1.41 1.41L12.67 11H3v2h9.67l-2.58 2.59zM19 3H5c-1.11 0-2 .9-2 2v4h2V5h14v14H5v-4H3v4c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/></svg>
                 <span>Logout</span>
             </a>
@@ -69,121 +71,161 @@
             <div id="panel-overview" class="dashboard-panel">
                 <div class="dashboard-header">
                     <div class="dashboard-title">
-                        <h2>Personal Impact Hub</h2>
-                        <p>Welcome back, John. Here is the summary of your contributions.</p>
-                    </div>
-                    <a href="donate.html" class="btn btn-primary btn-sm">New Donation</a>
-                </div>
-                
-                <!-- Metric Cards -->
-                <div class="dashboard-grid">
-                    <div class="dashboard-card">
-                        <div class="dashboard-card-icon success" aria-hidden="true">
-                            <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                        </div>
-                        <div class="dashboard-card-details">
-                            <span>Total Donated</span>
-                            <h3>$670</h3>
-                        </div>
-                    </div>
-                    <div class="dashboard-card">
-                        <div class="dashboard-card-icon accent" aria-hidden="true">
-                            <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
-                        </div>
-                        <div class="dashboard-card-details">
-                            <span>Volunteered Time</span>
-                            <h3>24 Hours</h3>
-                        </div>
-                    </div>
-                    <div class="dashboard-card">
-                        <div class="dashboard-card-icon blue" aria-hidden="true">
-                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-                        </div>
-                        <div class="dashboard-card-details">
-                            <span>Missions Backed</span>
-                            <h3>3 Operations</h3>
-                        </div>
-                    </div>
-                    <div class="dashboard-card">
-                        <div class="dashboard-card-icon primary" aria-hidden="true">
-                            <svg viewBox="0 0 24 24"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
-                        </div>
-                        <div class="dashboard-card-details">
-                            <span>Active alerts</span>
-                            <h3>2 Alerts</h3>
-                        </div>
+                        <h2>Rescue Dispatch &amp; Aid Console</h2>
+                        <p>Track your active emergency aid dispatches, request rescue support, and find safe zones.</p>
                     </div>
                 </div>
                 
-                <!-- Chart Area -->
-                <div class="dashboard-content-split">
-                    <div class="dashboard-content-card">
-                        <div class="dashboard-card-header">
-                            <h3>My Contribution Trend</h3>
-                            <span style="font-size: 0.8rem; color: var(--color-text-muted);">Feb - Jul (USD $)</span>
-                        </div>
-                        <div class="chart-container">
-                            <svg id="svg-user-donations-chart" class="svg-chart"></svg>
-                        </div>
-                    </div>
+                <!-- Main Member Console Layout Grid -->
+                <div class="console-row">
                     
-                    <div class="dashboard-content-card">
-                        <div class="dashboard-card-header">
-                            <h3>Next Rescue Drills</h3>
+                    <!-- Left Column (Main Volunteer Modules) -->
+                    <div class="console-main-col">
+                        
+                        <!-- Top 3 Metric Cards Grid -->
+                        <div class="console-metrics-grid">
+                            <!-- Card 1 -->
+                            <div class="dashboard-card" style="padding: 20px;">
+                                <span style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: var(--color-text-muted);">My Active Requests</span>
+                                <h3 style="font-size: 1.8rem; margin: 10px 0; color: white;">2 Pending / 3 Resolved</h3>
+                                <div class="progress-bar" style="height: 6px; margin-bottom: 8px;">
+                                    <div class="progress-fill" style="width: 60.0%;"></div>
+                                </div>
+                                <span style="font-size: 0.75rem; color: var(--color-text-muted);">Request status: <strong style="color: #00E676;">60% success rate</strong></span>
+                            </div>
+                            
+                            <!-- Card 2 -->
+                            <div class="dashboard-card" style="padding: 20px;">
+                                <span style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: var(--color-text-muted);">Estimated Dispatch ETA</span>
+                                <h3 style="font-size: 1.8rem; margin: 10px 0; color: white;">14 Mins</h3>
+                                <div class="progress-bar" style="height: 6px; margin-bottom: 8px;">
+                                    <div class="progress-fill" style="width: 100%;"></div>
+                                </div>
+                                <span style="font-size: 0.75rem; color: var(--color-text-muted);">Emergency Unit: <strong style="color: #00E676;">En Route</strong></span>
+                            </div>
+                            
+                            <!-- Card 3 -->
+                            <div class="dashboard-card" style="padding: 20px;">
+                                <span style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: var(--color-text-muted);">Active Relief Centers</span>
+                                <h3 style="font-size: 1.8rem; margin: 10px 0; color: white;">12 Open Nodes</h3>
+                                <div class="progress-bar" style="height: 6px; margin-bottom: 8px;">
+                                    <div class="progress-fill" style="width: 90%;"></div>
+                                </div>
+                                <span style="font-size: 0.75rem; color: var(--color-text-muted);">Shelter occupancy: <strong style="color: #00E676;">Normal</strong></span>
+                            </div>
                         </div>
-                        <ul class="transparency-list" style="padding-left: 0;">
-                            <li style="color: var(--color-text-dark); margin-bottom: 12px;">
-                                <strong>Flood boat drill</strong><br>
-                                <span style="font-size: 0.8rem; color: var(--color-text-muted);">August 15, 9:00 AM • Lake Command Hub</span>
-                            </li>
-                            <li style="color: var(--color-text-dark); margin-bottom: 12px;">
-                                <strong>First-aid refresher</strong><br>
-                                <span style="font-size: 0.8rem; color: var(--color-text-muted);">August 22, 2:00 PM • HQ Clinic Room</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
 
-                <!-- Recent Activities Table -->
-                <div class="dashboard-content-card">
-                    <div class="dashboard-card-header">
-                        <h3>Recent Transactions</h3>
+                        <!-- Middle Card: Active Deployments -->
+                        <div class="dashboard-card" style="padding: 20px; display: flex; flex-direction: column; justify-content: center; min-height: 140px;">
+                            <span style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: var(--color-text-muted);">Current Evacuation Status</span>
+                            <h3 style="font-size: 2.2rem; margin: 10px 0; color: white;">Shelter Zone Alpha Active</h3>
+                            <div class="progress-bar" style="height: 8px; margin-bottom: 10px; width: 100%;">
+                                <div class="progress-fill" style="width: 100%;"></div>
+                            </div>
+                            <span style="font-size: 0.8rem; color: var(--color-text-muted);">Evacuation routing: <strong style="color: #00E676;">Assigned to Coastal Floods Safety Center</strong></span>
+                        </div>
+
+                        <!-- Bottom Area: Rescue Request History -->
+                        <div class="dashboard-card" style="padding: 20px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                                <h3 style="font-size: 1.1rem; color: white;">Rescue Request History</h3>
+                                <button class="btn btn-primary btn-sm" style="font-size: 0.75rem; padding: 6px 12px;" onclick="alert('Support ticket system active. Request logged.')">Create Emergency Request</button>
+                            </div>
+                            <div class="table-wrapper" style="overflow-x: auto;">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Request ID</th>
+                                            <th>Category</th>
+                                            <th>Urgency</th>
+                                            <th>Dispatch Team</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>#REQ-9012</td>
+                                            <td>Flooding Rescue</td>
+                                            <td><span class="status-badge pending" style="color: #FF5252 !important; border-color: rgba(255,82,82,0.3) !important; background-color: rgba(255,82,82,0.1) !important;">HIGH</span></td>
+                                            <td>Coast Guard Unit 4</td>
+                                            <td><span class="status-badge pending">DISPATCHED</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>#REQ-8941</td>
+                                            <td>Medical Emergency</td>
+                                            <td><span class="status-badge active" style="color: #FFB300 !important; border-color: rgba(255,179,0,0.3) !important; background-color: rgba(255,179,0,0.1) !important;">MEDIUM</span></td>
+                                            <td>Red Cross Mobile 1</td>
+                                            <td><span class="status-badge completed">RESOLVED</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>#REQ-8830</td>
+                                            <td>Food &amp; Water Supply</td>
+                                            <td><span class="status-badge active" style="color: #00E676 !important; border-color: rgba(0,230,118,0.3) !important; background-color: rgba(0,230,118,0.1) !important;">LOW</span></td>
+                                            <td>Volunteers Team B</td>
+                                            <td><span class="status-badge completed">RESOLVED</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="table-wrapper">
-                        <table class="db-table" aria-label="Recent Transactions Table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Date</th>
-                                    <th scope="col">Purpose</th>
-                                    <th scope="col">Amount</th>
-                                    <th scope="col">Payment Method</th>
-                                    <th scope="col">Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Jul 28, 2026</td>
-                                    <td>Monsoon Floods Response</td>
-                                    <td>$120.00</td>
-                                    <td>Credit Card</td>
-                                    <td><span class="status-badge success">Success</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Jun 14, 2026</td>
-                                    <td>Cyclone Relief Support</td>
-                                    <td>$250.00</td>
-                                    <td>PayPal</td>
-                                    <td><span class="status-badge success">Success</span></td>
-                                </tr>
-                                <tr>
-                                    <td>Apr 03, 2026</td>
-                                    <td>General Emergency Reserve</td>
-                                    <td>$100.00</td>
-                                    <td>Credit Card</td>
-                                    <td><span class="status-badge success">Success</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+
+                    <!-- Right Column (Sidebar Modules) -->
+                    <div class="console-side-col">
+                        
+                        <!-- Side Module 1: Aid Allocation Status -->
+                        <div class="dashboard-card" style="padding: 20px;">
+                            <h3 style="font-size: 1rem; color: white; display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                                <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: #00E676;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                                Aid Allocation Status
+                            </h3>
+                            <span style="font-size: 0.8rem; color: var(--color-text-muted);">Local Center Supplies</span>
+                            <div style="display: flex; justify-content: space-between; margin: 8px 0; font-weight: 600;">
+                                <span>Resource Level</span>
+                                <span style="color: #00E676;">85% Stocked</span>
+                            </div>
+                            <div class="progress-bar" style="height: 6px;">
+                                <div class="progress-fill" style="width: 85%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Side Module 2: Evacuation Safe Zones -->
+                        <div class="dashboard-card" style="padding: 20px;">
+                            <h3 style="font-size: 1rem; color: white; display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                                <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: #00E676;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                                Evacuation Safe Zones
+                            </h3>
+                            <div style="display: flex; flex-direction: column; gap: 10px;">
+                                <div style="display: flex; justify-content: space-between; font-size: 0.85rem;">
+                                    <span>Safe Zone A (City High)</span>
+                                    <span style="color: #00E676; font-weight: 600;">ACTIVE</span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; font-size: 0.85rem;">
+                                    <span>Safe Zone B (Central Stadium)</span>
+                                    <span style="color: #FF5252; font-weight: 600;">FULL</span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; font-size: 0.85rem;">
+                                    <span>Safe Zone C (Metro Arena)</span>
+                                    <span style="color: #00E676; font-weight: 600;">OPEN</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Side Module 3: Quick Aid Request Portal -->
+                        <div class="dashboard-card" style="padding: 20px;">
+                            <h3 style="font-size: 1rem; color: white; margin-bottom: 12px;">Quick Aid Request Portal</h3>
+                            <span style="font-size: 0.8rem; color: var(--color-text-muted); display: block; margin-bottom: 8px;">Select support required:</span>
+                            <div style="display: flex; flex-direction: column; gap: 10px;">
+                                <select class="form-control" style="font-size: 0.8rem; padding: 8px 12px; background-color: var(--color-primary); color: white;">
+                                    <option value="rescue">Evacuation &amp; Water Rescue</option>
+                                    <option value="medical">Emergency Medical Assistance</option>
+                                    <option value="supplies">Ration Kits &amp; Clean Water</option>
+                                </select>
+                                <button class="btn btn-primary btn-sm" onclick="alert('Emergency request sent to dispatch command desk! Rescue units will contact you.')" style="width: 100%; font-size: 0.8rem; padding: 8px 12px;">Request Assistance</button>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -192,58 +234,44 @@
             <div id="panel-donations" class="dashboard-panel" style="display: none;">
                 <div class="dashboard-header">
                     <div class="dashboard-title">
-                        <h2>Contribution Records</h2>
-                        <p>Complete historical list of secure financial allocations made to Stackly.</p>
+                        <h2>Help Center &amp; Evacuation FAQ</h2>
+                        <p>Important evacuation resources, helper contact directories, and security measures.</p>
                     </div>
                 </div>
                 
-                <div class="dashboard-content-card">
+                <div class="dashboard-content-card" style="padding: 20px;">
                     <div class="table-wrapper">
-                        <table class="db-table" aria-label="Detailed Donations History">
+                        <table class="db-table" aria-label="Help Center Guides Table">
                             <thead>
                                 <tr>
-                                    <th scope="col">Transaction ID</th>
-                                    <th scope="col">Date</th>
-                                    <th scope="col">Allocation Project</th>
-                                    <th scope="col">Amount</th>
-                                    <th scope="col">Receipt</th>
+                                    <th scope="col">FAQ Topic</th>
+                                    <th scope="col">Recommended Action</th>
+                                    <th scope="col">Assigned Support Center</th>
+                                    <th scope="col">Emergency Contact</th>
+                                    <th scope="col">Guides</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>#TXN-98431</td>
-                                    <td>Jul 28, 2026</td>
-                                    <td>Monsoon Floods Emergency Response</td>
-                                    <td><strong>$120.00</strong></td>
-                                    <td><a href="404.html" style="color: var(--color-secondary); font-weight: 600;">Download PDF</a></td>
+                                    <td>High Water Warning</td>
+                                    <td>Move to Floor 2+ or roof immediately</td>
+                                    <td>Shelter Zone Alpha</td>
+                                    <td><strong>Hotline 911</strong></td>
+                                    <td><a href="404.html" style="color: var(--color-secondary); font-weight: 600;">Read Manual</a></td>
                                 </tr>
                                 <tr>
-                                    <td>#TXN-76120</td>
-                                    <td>Jun 14, 2026</td>
-                                    <td>Cyclone Rehabilitation Campaign</td>
-                                    <td><strong>$250.00</strong></td>
-                                    <td><a href="404.html" style="color: var(--color-secondary); font-weight: 600;">Download PDF</a></td>
+                                    <td>Medical Emergency Dispatch</td>
+                                    <td>Place high-vis safety flag/beacon on roof</td>
+                                    <td>Red Cross Mobile 1</td>
+                                    <td><strong>Hotline 112</strong></td>
+                                    <td><a href="404.html" style="color: var(--color-secondary); font-weight: 600;">Read Manual</a></td>
                                 </tr>
                                 <tr>
-                                    <td>#TXN-45129</td>
-                                    <td>Apr 03, 2026</td>
-                                    <td>General Relief Support Reserves</td>
-                                    <td><strong>$100.00</strong></td>
-                                    <td><a href="404.html" style="color: var(--color-secondary); font-weight: 600;">Download PDF</a></td>
-                                </tr>
-                                <tr>
-                                    <td>#TXN-23114</td>
-                                    <td>Mar 19, 2026</td>
-                                    <td>Monsoon Floods Assistance Packs</td>
-                                    <td><strong>$150.00</strong></td>
-                                    <td><a href="404.html" style="color: var(--color-secondary); font-weight: 600;">Download PDF</a></td>
-                                </tr>
-                                <tr>
-                                    <td>#TXN-11094</td>
-                                    <td>Feb 04, 2026</td>
-                                    <td>General Relief Support Reserves</td>
-                                    <td><strong>$50.00</strong></td>
-                                    <td><a href="404.html" style="color: var(--color-secondary); font-weight: 600;">Download PDF</a></td>
+                                    <td>Food &amp; Water Shortages</td>
+                                    <td>Signal rescue team during daily boat pass</td>
+                                    <td>Supply Hub Delta</td>
+                                    <td><strong>Hotline 100</strong></td>
+                                    <td><a href="404.html" style="color: var(--color-secondary); font-weight: 600;">Read Manual</a></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -255,52 +283,48 @@
             <div id="panel-volunteering" class="dashboard-panel" style="display: none;">
                 <div class="dashboard-header">
                     <div class="dashboard-title">
-                        <h2>Volunteer Deployment &amp; Logs</h2>
-                        <p>Track your registered emergency shifts, drills, and operational credentials.</p>
+                        <h2>Active Rescue Dispatches Tracker</h2>
+                        <p>Real-time dispatch updates for rescue squads assigned to your safety operations.</p>
                     </div>
-                    <a href="involved.html#volunteer-registration" class="btn btn-secondary btn-sm">Register Shift</a>
                 </div>
                 
-                <div class="dashboard-content-card" style="margin-bottom: 30px;">
-                    <div class="dashboard-card-header">
-                        <h3>Deployment History</h3>
-                    </div>
+                <div class="dashboard-content-card" style="padding: 20px;">
                     <div class="table-wrapper">
-                        <table class="db-table" aria-label="Volunteer Shift Logs">
+                        <table class="db-table" aria-label="Active Rescue Dispatches Table">
                             <thead>
                                 <tr>
-                                    <th scope="col">Date</th>
-                                    <th scope="col">Operation Name</th>
-                                    <th scope="col">Role Assigned</th>
-                                    <th scope="col">Hours Logged</th>
-                                    <th scope="col">Supervisor</th>
-                                    <th scope="col">Verification</th>
+                                    <th scope="col">Dispatch ID</th>
+                                    <th scope="col">Service Type</th>
+                                    <th scope="col">Assigned Unit</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">ETA</th>
+                                    <th scope="col">Contact Node</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Jul 30, 2026</td>
-                                    <td>Monsoon Floods Response</td>
-                                    <td>Supply Logistics Coordinator</td>
-                                    <td>8 Hours</td>
-                                    <td>M. Richards</td>
-                                    <td><span class="status-badge success">Verified</span></td>
+                                    <td>DISP-901</td>
+                                    <td>Evacuation Boat Rescue</td>
+                                    <td>Coast Guard Unit 4</td>
+                                    <td><span class="status-badge pending" style="color: #FFB300 !important; border-color: rgba(255,179,0,0.3) !important; background-color: rgba(255,179,0,0.1) !important;">DISPATCHED</span></td>
+                                    <td><strong>14 Mins</strong></td>
+                                    <td>Radio Channel 8</td>
                                 </tr>
                                 <tr>
-                                    <td>Jun 18, 2026</td>
-                                    <td>Cyclone Rehab Support</td>
-                                    <td>Shelter Reassembly Builder</td>
-                                    <td>10 Hours</td>
-                                    <td>T. Henderson</td>
-                                    <td><span class="status-badge success">Verified</span></td>
+                                    <td>DISP-893</td>
+                                    <td>First-Aid Ambulance</td>
+                                    <td>Red Cross Mobile 1</td>
+                                    <td><span class="status-badge completed">RESOLVED</span></td>
+                                    <td>Completed</td>
+                                    <td>HQ Clinic Room</td>
                                 </tr>
                                 <tr>
-                                    <td>Mar 21, 2026</td>
-                                    <td>Monsoon Floods Assistance</td>
-                                    <td>Water Purification pack distribution</td>
-                                    <td>6 Hours</td>
-                                    <td>M. Richards</td>
-                                    <td><span class="status-badge success">Verified</span></td>
+                                    <td>DISP-880</td>
+                                    <td>Clean Water &amp; Food Supply</td>
+                                    <td>Volunteers Team B</td>
+                                    <td><span class="status-badge completed">RESOLVED</span></td>
+                                    <td>Completed</td>
+                                    <td>Supply Desk A</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -347,6 +371,94 @@
                         
                         <button type="submit" class="btn btn-primary" style="margin-top: 15px;">Save Profile Changes</button>
                     </form>
+                </div>
+            </div>
+            
+            <!-- PANEL: MAIN PORTAL -->
+            <div id="panel-portal" class="dashboard-panel" style="display: none;">
+                <div class="dashboard-header">
+                    <div class="dashboard-title">
+                        <h2>Disaster Relief Coordinator Portal</h2>
+                        <p>Interactive guide map, emergency helpline numbers, and local relief announcements.</p>
+                    </div>
+                </div>
+                
+                <div class="console-row">
+                    <div class="console-main-col">
+                        <div class="console-metrics-grid">
+                            <div class="dashboard-card" style="padding: 20px;">
+                                <span style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: var(--color-text-muted);">Relief Fund Raised</span>
+                                <h3 style="font-size: 1.8rem; margin: 10px 0; color: white;">$4.8M / $5.0M</h3>
+                                <div class="progress-bar" style="height: 6px; margin-bottom: 8px;">
+                                    <div class="progress-fill" style="width: 96%;"></div>
+                                </div>
+                                <span style="font-size: 0.75rem; color: var(--color-text-muted);">Goal success: <strong style="color: #00E676;">96% reached</strong></span>
+                            </div>
+                            <div class="dashboard-card" style="padding: 20px;">
+                                <span style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: var(--color-text-muted);">Evacuation Rate</span>
+                                <h3 style="font-size: 1.8rem; margin: 10px 0; color: white;">92%</h3>
+                                <div class="progress-bar" style="height: 6px; margin-bottom: 8px;">
+                                    <div class="progress-fill" style="width: 92%;"></div>
+                                </div>
+                                <span style="font-size: 0.75rem; color: var(--color-text-muted);">Total cleared: <strong style="color: #00E676;">Highly successful</strong></span>
+                            </div>
+                            <div class="dashboard-card" style="padding: 20px;">
+                                <span style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: var(--color-text-muted);">Active Rescue Missions</span>
+                                <h3 style="font-size: 1.8rem; margin: 10px 0; color: white;">142 Missions</h3>
+                                <div class="progress-bar" style="height: 6px; margin-bottom: 8px;">
+                                    <div class="progress-fill" style="width: 100%;"></div>
+                                </div>
+                                <span style="font-size: 0.75rem; color: var(--color-text-muted);">Squad status: <strong style="color: #00E676;">Deploying</strong></span>
+                            </div>
+                        </div>
+                        
+                        <div class="dashboard-card" style="padding: 20px;">
+                            <h3 style="font-size: 1.1rem; color: white; margin-bottom: 15px;">Local Relief Stations</h3>
+                            <div class="table-wrapper">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Relief Station</th>
+                                            <th>Region / Zone</th>
+                                            <th>Shelter Capacity</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Station Alpha</td>
+                                            <td>City North Gym</td>
+                                            <td><strong>85% occupied</strong></td>
+                                            <td><span class="status-badge completed">Success</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Station Beta</td>
+                                            <td>Central Stadium</td>
+                                            <td><strong>100% occupied</strong></td>
+                                            <td><span class="status-badge pending" style="color: #FF5252 !important; border-color: rgba(255,82,82,0.3) !important; background-color: rgba(255,82,82,0.1) !important;">FULL</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Station Gamma</td>
+                                            <td>Metro Arena</td>
+                                            <td><strong>42% occupied</strong></td>
+                                            <td><span class="status-badge completed">Success</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="console-side-col">
+                        <div class="dashboard-card" style="padding: 20px;">
+                            <h3 style="font-size: 1rem; color: white; margin-bottom: 12px;">Quick Portal Actions</h3>
+                            <div style="display: flex; flex-direction: column; gap: 10px;">
+                                <a href="index.html" class="btn btn-primary btn-sm" style="text-decoration: none; text-align: center;">View Home Landing Page</a>
+                                <a href="about.html" class="btn btn-secondary btn-sm" style="text-decoration: none; text-align: center; color: white; border-color: rgba(255,255,255,0.15);">View About Portal</a>
+                                <a href="contact.html" class="btn btn-secondary btn-sm" style="text-decoration: none; text-align: center; color: white; border-color: rgba(255,255,255,0.15);">View Help Desk</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             
