@@ -458,6 +458,8 @@ ul {
     line-height: 1.15;
     margin-bottom: 24px;
     letter-spacing: -0.5px;
+    padding-left: 6px;
+    margin-left: -6px;
 }
 
 .hero-desc {
