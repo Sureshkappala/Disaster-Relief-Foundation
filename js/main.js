@@ -46,6 +46,7 @@ function initMobileMenu() {
         e.stopPropagation();
         hamburger.classList.toggle('is-active');
         navMenu.classList.toggle('is-active');
+        document.documentElement.classList.toggle('overflow-hidden');
         document.body.classList.toggle('overflow-hidden');
     });
     
@@ -55,6 +56,7 @@ function initMobileMenu() {
         drawerClose.addEventListener('click', () => {
             hamburger.classList.remove('is-active');
             navMenu.classList.remove('is-active');
+            document.documentElement.classList.remove('overflow-hidden');
             document.body.classList.remove('overflow-hidden');
         });
     }
@@ -65,6 +67,7 @@ function initMobileMenu() {
         link.addEventListener('click', () => {
             hamburger.classList.remove('is-active');
             navMenu.classList.remove('is-active');
+            document.documentElement.classList.remove('overflow-hidden');
             document.body.classList.remove('overflow-hidden');
         });
     });
@@ -74,6 +77,7 @@ function initMobileMenu() {
         if (!navMenu.contains(e.target) && !hamburger.contains(e.target) && navMenu.classList.contains('is-active')) {
             hamburger.classList.remove('is-active');
             navMenu.classList.remove('is-active');
+            document.documentElement.classList.remove('overflow-hidden');
             document.body.classList.remove('overflow-hidden');
         }
     });

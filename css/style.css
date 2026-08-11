@@ -68,9 +68,11 @@ body {
     overflow-x: hidden;
 }
 
+html.overflow-hidden,
 body.overflow-hidden {
     overflow: hidden !important;
     touch-action: none !important;
+    height: 100% !important;
 }
 
 img {
