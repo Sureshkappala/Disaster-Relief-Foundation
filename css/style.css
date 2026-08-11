@@ -2572,6 +2572,18 @@ ul {
         width: 100%;
     }
     
+    .nav-mobile-cta .btn-secondary {
+        background-color: transparent !important;
+        color: white !important;
+        border: 2px solid rgba(255, 255, 255, 0.4) !important;
+    }
+    
+    .nav-mobile-cta .btn-secondary:hover {
+        background-color: white !important;
+        color: var(--color-primary) !important;
+        border-color: white !important;
+    }
+    
     .drawer-contact-info {
         display: block !important;
         margin-top: auto;
