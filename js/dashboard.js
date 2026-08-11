@@ -4,6 +4,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     initDashboardTabs();
+    initMobileSidebar();
     initInteractiveControls();
     renderCharts();
 });
@@ -431,4 +432,76 @@ function showToast(message) {
             document.body.removeChild(toast);
         }, 400);
     }, 3500);
+}
+
+/**
+ * 4. Mobile Dashboard Sidebar Drawer Navigation
+ */
+function initMobileSidebar() {
+    const sidebarToggle = document.querySelector('.mobile-sidebar-toggle');
+    const sidebar = document.querySelector('.sidebar');
+    const sidebarClose = document.querySelector('.sidebar-close-btn');
+    const sidebarItems = document.querySelectorAll('.sidebar-item');
+    const mobileTitle = document.querySelector('.mobile-brand-title');
+    
+    if (!sidebar) return;
+    
+    // Open drawer
+    if (sidebarToggle) {
+        sidebarToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            sidebar.classList.add('is-active');
+            document.documentElement.classList.add('overflow-hidden');
+            document.body.classList.add('overflow-hidden');
+        });
+    }
+    
+    // Close drawer via Close button
+    if (sidebarClose) {
+        sidebarClose.addEventListener('click', () => {
+            sidebar.classList.remove('is-active');
+            document.documentElement.classList.remove('overflow-hidden');
+            document.body.classList.remove('overflow-hidden');
+        });
+    }
+    
+    // Mapping of tab names to header titles
+    const tabTitleMap = {
+        'overview': sidebar.querySelector('.sidebar-item[data-tab="overview"] span')?.textContent || 'Overview',
+        'volunteers': 'Bucket Clusters',
+        'donations': 'API Tokens',
+        'volunteering': 'Evacuation Help',
+        'portal': 'Relief Console'
+    };
+    
+    // Close drawer when sidebar items are clicked
+    sidebarItems.forEach(item => {
+        item.addEventListener('click', () => {
+            // Close menu on mobile
+            if (window.innerWidth <= 992) {
+                sidebar.classList.remove('is-active');
+                document.documentElement.classList.remove('overflow-hidden');
+                document.body.classList.remove('overflow-hidden');
+            }
+            
+            // Dynamically update mobile header title
+            const targetTab = item.getAttribute('data-tab');
+            if (mobileTitle && targetTab && tabTitleMap[targetTab]) {
+                mobileTitle.textContent = tabTitleMap[targetTab];
+            }
+        });
+    });
+    
+    // Close drawer when clicking outside
+    document.addEventListener('click', (e) => {
+        if (window.innerWidth <= 992 && 
+            sidebar.classList.contains('is-active') && 
+            !sidebar.contains(e.target) && 
+            (!sidebarToggle || !sidebarToggle.contains(e.target))) {
+            
+            sidebar.classList.remove('is-active');
+            document.documentElement.classList.remove('overflow-hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+    });
 }

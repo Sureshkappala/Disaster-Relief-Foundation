@@ -1856,6 +1856,10 @@ ul {
 }
 
 /* User & Admin Dashboards Layouts (dashboard-user.html, dashboard-admin.html) */
+.mobile-dashboard-header {
+    display: none;
+}
+
 .dashboard-wrapper {
     display: flex;
     min-height: calc(100vh - var(--header-height));
@@ -3322,45 +3326,108 @@ input::-ms-clear {
         flex-direction: column !important;
     }
 
-    .dashboard-dark-layout .sidebar {
-        width: 100% !important;
-        height: auto !important;
-        position: relative !important;
-        top: 0 !important;
-        flex-direction: column !important;
+    /* Mobile Dashboard Header Bar */
+    .mobile-dashboard-header {
         display: flex !important;
-        border-right: none !important;
-        border-bottom: 1px solid rgba(0, 230, 118, 0.15) !important;
-        padding: 20px !important;
+        align-items: center;
+        gap: 15px;
+        background-color: #0c231a;
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(0, 230, 118, 0.15);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        width: 100%;
+    }
+    
+    .mobile-sidebar-toggle {
+        background: none;
+        border: 1px solid rgba(0, 230, 118, 0.3);
+        background-color: rgba(0, 230, 118, 0.05);
+        border-radius: var(--radius-sm);
+        color: #00E676; /* Emerald green hamburger lines */
+        padding: 8px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition-normal);
+        line-height: 1;
+    }
+    
+    .mobile-sidebar-toggle:hover {
+        background-color: rgba(0, 230, 118, 0.15);
+        border-color: #00E676;
+        box-shadow: 0 0 10px rgba(0, 230, 118, 0.25);
+    }
+    
+    .mobile-brand-title {
+        font-weight: 700;
+        color: white;
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+    }
+    
+    /* Dynamic Title update & hide dashboard headers */
+    .dashboard-header {
+        display: none !important;
+    }
+
+    .dashboard-dark-layout .sidebar {
+        position: fixed !important;
+        top: 0 !important;
+        left: -300px !important; /* Start off-screen on the left */
+        width: 280px !important;
+        height: 100vh !important;
+        z-index: 1010 !important;
+        background-color: #0c231a !important; /* Dark green drawer background */
+        box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5) !important;
+        transition: left 0.4s ease-in-out, visibility 0.4s ease-in-out !important;
+        visibility: hidden !important;
+        padding: 24px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        overflow-y: auto !important;
+        border-right: 1px solid rgba(0, 230, 118, 0.15) !important;
+        border-bottom: none !important;
+    }
+    
+    .dashboard-dark-layout .sidebar.is-active {
+        left: 0 !important;
+        visibility: visible !important;
     }
 
     .dashboard-dark-layout .sidebar > div {
         width: 100% !important;
         display: flex !important;
         flex-direction: column !important;
-        gap: 15px !important;
+        gap: 20px !important;
     }
 
     .dashboard-dark-layout .sidebar-brand {
-        margin-bottom: 0 !important;
+        margin-bottom: 20px !important;
         padding: 0 !important;
         display: flex !important;
         justify-content: space-between !important;
         align-items: center !important;
     }
+    
+    .dashboard-dark-layout .sidebar-close-btn {
+        display: flex !important;
+    }
 
     .dashboard-dark-layout .sidebar-profile {
-        margin-bottom: 0 !important;
-        padding: 0 0 15px 0 !important;
+        margin-bottom: 20px !important;
+        padding: 0 0 20px 0 !important;
         border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
         flex-direction: row !important;
         align-items: center !important;
+        display: flex !important;
     }
 
     .dashboard-dark-layout .sidebar-menu {
         display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: wrap !important;
+        flex-direction: column !important;
         gap: 8px !important;
         margin-top: 0 !important;
         padding: 0 !important;
@@ -3368,14 +3435,16 @@ input::-ms-clear {
 
     .dashboard-dark-layout .sidebar-item {
         margin-bottom: 0 !important;
-        padding: 8px 12px !important;
-        font-size: 0.85rem !important;
+        padding: 12px 16px !important;
+        font-size: 0.9rem !important;
         border-radius: var(--radius-sm) !important;
+        width: 100% !important;
+        display: flex !important;
     }
 
     .dashboard-dark-layout .sidebar-item[style*="margin-top: auto"] {
-        margin-top: 10px !important;
-        align-self: flex-start !important;
+        margin-top: auto !important;
+        align-self: stretch !important;
     }
 
     .dashboard-dark-layout .dashboard-main {
