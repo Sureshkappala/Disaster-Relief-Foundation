@@ -2337,21 +2337,27 @@ ul {
 }
 
 /* Scroll reveal utility classes (activated via main.js scroll listener) */
+@keyframes floatImage {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
 .reveal {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transform: translateY(35px) scale(0.98);
+    transition: opacity 0.9s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0.9s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .reveal.active {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
 }
 
 .reveal-left {
     opacity: 0;
     transform: translateX(-40px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition: opacity 0.9s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0.9s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .reveal-left.active {
@@ -2362,13 +2368,80 @@ ul {
 .reveal-right {
     opacity: 0;
     transform: translateX(40px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition: opacity 0.9s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0.9s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .reveal-right.active {
     opacity: 1;
     transform: translateX(0);
 }
+
+/* Premium Hero Content Staggered Entry Transitions */
+.hero-content .hero-tag,
+.hero-content .hero-title,
+.hero-content .hero-desc,
+.hero-content .hero-actions,
+.hero-content .hero-trust-grid {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hero-content.active .hero-tag {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.1s;
+}
+
+.hero-content.active .hero-title {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.25s;
+}
+
+.hero-content.active .hero-desc {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.4s;
+}
+
+.hero-content.active .hero-actions {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.55s;
+}
+
+.hero-content.active .hero-trust-grid {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.7s;
+}
+
+/* Floating Animation for Active Hero Image Wrapper */
+.hero-visual.active .hero-img-wrapper {
+    animation: floatImage 5s ease-in-out infinite;
+    animation-delay: 0.9s;
+}
+
+/* Premium Card Stagger Helpers */
+.reveal.program-card:nth-child(1) { transition-delay: 0.05s; }
+.reveal.program-card:nth-child(2) { transition-delay: 0.15s; }
+.reveal.program-card:nth-child(3) { transition-delay: 0.25s; }
+.reveal.program-card:nth-child(4) { transition-delay: 0.35s; }
+.reveal.program-card:nth-child(5) { transition-delay: 0.45s; }
+.reveal.program-card:nth-child(6) { transition-delay: 0.55s; }
+.reveal.program-card:nth-child(7) { transition-delay: 0.65s; }
+.reveal.program-card:nth-child(8) { transition-delay: 0.75s; }
+.reveal.program-card:nth-child(9) { transition-delay: 0.85s; }
+
+.reveal.stat-card:nth-child(1) { transition-delay: 0.05s; }
+.reveal.stat-card:nth-child(2) { transition-delay: 0.15s; }
+.reveal.stat-card:nth-child(3) { transition-delay: 0.25s; }
+.reveal.stat-card:nth-child(4) { transition-delay: 0.35s; }
+
+.reveal.value-card:nth-child(1) { transition-delay: 0.05s; }
+.reveal.value-card:nth-child(2) { transition-delay: 0.15s; }
+.reveal.value-card:nth-child(3) { transition-delay: 0.25s; }
 
 /* ==========================================================================
    20. RESPONSIVE DESIGN - MEDIA QUERIES
