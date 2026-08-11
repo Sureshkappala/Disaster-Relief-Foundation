@@ -2402,45 +2402,60 @@ ul {
     }
     
     /* Navbar styling on Mobile */
+    .nav {
+        display: contents !important;
+    }
+
     .hamburger {
         display: flex !important;
         align-items: center;
         justify-content: center;
         z-index: 1001;
-        border: 1px solid rgba(10, 25, 47, 0.2) !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
         border-radius: var(--radius-sm);
         width: 38px;
         height: 38px;
         margin-right: -10px; /* Pull closer to the right edge */
-        background: transparent !important;
+        background-color: var(--color-primary) !important; /* Solid dark navy background for high contrast */
         cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     }
     
     .hamburger-inner, 
     .hamburger-inner::before, 
     .hamburger-inner::after {
-        background-color: var(--color-primary) !important;
+        background-color: white !important; /* Always white lines for guaranteed visibility */
     }
     
     .hamburger:hover {
+        background-color: var(--color-secondary) !important; /* Glowing orange on hover */
         border-color: var(--color-secondary) !important;
+        box-shadow: 0 0 12px rgba(255, 90, 54, 0.4);
     }
     
     .hamburger:hover .hamburger-inner,
     .hamburger:hover .hamburger-inner::before,
     .hamburger:hover .hamburger-inner::after {
-        background-color: var(--color-secondary) !important;
+        background-color: white !important;
     }
     
     /* Dark dashboard layout hamburger style override */
     .dashboard-dark-layout .hamburger {
-        border-color: rgba(0, 230, 118, 0.25) !important;
+        background-color: #0c231a !important; /* Solid dark green background */
+        border-color: rgba(0, 230, 118, 0.2) !important;
+    }
+    
+    .dashboard-dark-layout .hamburger:hover {
+        background-color: #00E676 !important; /* Glowing bright green on hover */
+        border-color: #00E676 !important;
+        box-shadow: 0 0 12px rgba(0, 230, 118, 0.4);
     }
     
     .dashboard-dark-layout .hamburger-inner,
     .dashboard-dark-layout .hamburger-inner::before,
     .dashboard-dark-layout .hamburger-inner::after {
-        background-color: var(--color-secondary) !important;
+        background-color: white !important;
     }
     
     .nav-menu {
@@ -3399,6 +3414,14 @@ input::-ms-clear {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
+    }
+    
+    .hero-tag,
+    .hero-title,
+    .hero-desc {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
     
     .hero-title {
