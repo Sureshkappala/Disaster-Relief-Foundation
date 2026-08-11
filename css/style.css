@@ -3383,10 +3383,25 @@ input::-ms-clear {
         font-size: 1.6rem !important;
     }
     
+    .hero-content {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    
     .hero-title {
         font-size: 2rem !important;
         padding-left: 0 !important;
         margin-left: 0 !important;
+    }
+    
+    .hero-actions {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+        gap: 15px !important;
     }
     
     /* Responsive image wrapper heights */
@@ -3430,18 +3445,13 @@ input::-ms-clear {
         font-size: 0.9rem !important;
     }
     
-    /* Button sizes */
-    .btn {
-        width: 100% !important; /* Full width buttons on mobile forms */
+    /* Button sizes inside forms & portals */
+    .auth-card .btn,
+    .form-card .btn,
+    form .btn {
+        width: 100% !important;
         text-align: center !important;
         justify-content: center !important;
-    }
-    
-    /* Quick link elements flex overrides */
-    .hero-actions, .hero-trust-grid {
-        flex-direction: column !important;
-        width: 100% !important;
-        gap: 12px !important;
     }
     
     /* Mobile dashboard specific fixes */
