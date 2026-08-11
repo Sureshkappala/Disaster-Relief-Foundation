@@ -2703,7 +2703,9 @@ ul {
 /* Extra Small Screens (480px and down) */
 @media (max-width: 480px) {
     .hero-title {
-        font-size: 2.2rem;
+        font-size: 1.75rem !important;
+        padding-left: 0 !important;
+        margin-left: 0 !important;
     }
     .hero-actions {
         flex-direction: column;
@@ -3363,6 +3365,12 @@ input::-ms-clear {
         font-size: 1.6rem !important;
     }
     
+    .hero-title {
+        font-size: 2rem !important;
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+    }
+    
     /* Responsive image wrapper heights */
     .hero-img-wrapper img,
     .mission-image-wrapper img {
@@ -3381,6 +3389,12 @@ input::-ms-clear {
     .auth-page .auth-card {
         padding: 24px 16px !important;
         border-radius: var(--radius-md) !important;
+    }
+    
+    .hero-title {
+        font-size: 1.75rem !important;
+        padding-left: 0 !important;
+        margin-left: 0 !important;
     }
     
     /* Table overflow scroll container */
