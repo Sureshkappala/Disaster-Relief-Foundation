@@ -2407,7 +2407,7 @@ ul {
         align-items: center;
         justify-content: center;
         z-index: 1001;
-        border: 1px solid rgba(255, 255, 255, 0.25) !important;
+        border: 1px solid rgba(10, 25, 47, 0.2) !important;
         border-radius: var(--radius-sm);
         width: 38px;
         height: 38px;
@@ -2419,7 +2419,7 @@ ul {
     .hamburger-inner, 
     .hamburger-inner::before, 
     .hamburger-inner::after {
-        background-color: white !important;
+        background-color: var(--color-primary) !important;
     }
     
     .hamburger:hover {
@@ -2429,6 +2429,17 @@ ul {
     .hamburger:hover .hamburger-inner,
     .hamburger:hover .hamburger-inner::before,
     .hamburger:hover .hamburger-inner::after {
+        background-color: var(--color-secondary) !important;
+    }
+    
+    /* Dark dashboard layout hamburger style override */
+    .dashboard-dark-layout .hamburger {
+        border-color: rgba(0, 230, 118, 0.25) !important;
+    }
+    
+    .dashboard-dark-layout .hamburger-inner,
+    .dashboard-dark-layout .hamburger-inner::before,
+    .dashboard-dark-layout .hamburger-inner::after {
         background-color: var(--color-secondary) !important;
     }
     
