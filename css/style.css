@@ -3611,8 +3611,15 @@ input::-ms-clear {
         transform: translateY(0) !important;
     }
     
-    /* Reduce panel card paddings and constrain width on mobile viewports */
-    .contact-info-panel,
+    /* Remove panel card background/padding and constrain width on mobile viewports */
+    .contact-info-panel {
+        background-color: transparent !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
     .form-card-dark {
         padding: 24px !important;
         max-width: 100% !important;
