@@ -238,7 +238,50 @@
                                     <option value="medical">Emergency Medical Assistance</option>
                                     <option value="supplies">Ration Kits &amp; Clean Water</option>
                                 </select>
-                                <button class="btn btn-primary btn-sm" style="width: 100%; font-size: 0.8rem; padding: 8px 12px;">Request Assistance</button>
+                                <button class="btn btn-primary btn-sm" style="width: 100%; font-size: 0.8rem; padding: 8px 12px;" onclick="showToast('Aid Request Submitted Successfully!');">Request Assistance</button>
+                            </div>
+                        </div>
+
+                        <!-- Side Module 4: Active Rescuer Tracking -->
+                        <div class="dashboard-card" style="padding: 20px;">
+                            <h3 style="font-size: 1rem; color: white; display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                                <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: #00E676;"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                                Active Rescue Dispatch Tracking
+                            </h3>
+                            <div style="padding: 10px; background-color: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: var(--radius-sm); font-size: 0.8rem;">
+                                <div style="display: flex; justify-content: space-between; font-weight: 600;">
+                                    <span>Squad Echo 4 (Zodiac)</span>
+                                    <span style="color: #00E676;">En Route</span>
+                                </div>
+                                <div style="color: var(--color-text-muted); font-size: 0.75rem; margin-top: 4px;">Target Area: Sector Alpha Dike</div>
+                                <div style="margin-top: 8px; font-weight: 700; color: white;">ETA: 12 mins</div>
+                            </div>
+                        </div>
+
+                        <!-- Side Module 5: Bed Space safe-haven Index -->
+                        <div class="dashboard-card" style="padding: 20px;">
+                            <h3 style="font-size: 1rem; color: white; display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                                <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; fill: #00E676;"><path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4z"/></svg>
+                                Shelter Bed Availability
+                            </h3>
+                            <span style="font-size: 0.8rem; color: var(--color-text-muted); display: block; margin-bottom: 10px;">Safe zone shelter occupancy levels:</span>
+                            <div style="margin-bottom: 12px;">
+                                <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 4px;">
+                                    <span>Main Evacuation Hub</span>
+                                    <span style="color: #FF5252;">91% Full</span>
+                                </div>
+                                <div class="progress-bar" style="height: 4px;">
+                                    <div class="progress-fill" style="width: 91%; background-color: #FF5252;"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div style="display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 4px;">
+                                    <span>High School safe-haven</span>
+                                    <span style="color: #00E676;">18% Full</span>
+                                </div>
+                                <div class="progress-bar" style="height: 4px;">
+                                    <div class="progress-fill" style="width: 18%;"></div>
+                                </div>
                             </div>
                         </div>
 
