@@ -3600,6 +3600,20 @@ input::-ms-clear {
         overflow-x: hidden !important;
     }
     
+    /* Reset horizontal reveal translations to vertical on mobile to prevent clipping and page panning */
+    .reveal-left, .reveal-right {
+        transform: translateY(30px) !important;
+    }
+    .reveal-left.active, .reveal-right.active {
+        transform: translateY(0) !important;
+    }
+    
+    /* Reduce panel card paddings on mobile viewports */
+    .contact-info-panel,
+    .form-card-dark {
+        padding: 24px !important;
+    }
+    
     /* Global heading scaling */
     h1, .section-title {
         font-size: 2rem !important;
