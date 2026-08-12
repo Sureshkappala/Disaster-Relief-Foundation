@@ -3705,6 +3705,16 @@ input::-ms-clear {
     .section {
         padding: 40px 0 !important;
     }
+    
+    .operation-card {
+        padding: 20px !important;
+    }
+    
+    .operation-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 8px !important;
+    }
 }
 
 @media (max-width: 576px) {
