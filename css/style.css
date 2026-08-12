@@ -1704,6 +1704,10 @@ body.has-fixed-header {
     border-radius: var(--radius-lg);
 }
 
+.contact-info-panel .section-title {
+    text-align: left;
+}
+
 .contact-info-panel h3 {
     font-size: 1.6rem;
     margin-bottom: 30px;
@@ -3714,6 +3718,25 @@ input::-ms-clear {
         flex-direction: column !important;
         align-items: flex-start !important;
         gap: 8px !important;
+    }
+    
+    .contact-info-panel .section-title,
+    .contact-info-panel .section-tag,
+    .contact-info-panel > p {
+        text-align: center !important;
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    
+    .contact-item {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+    
+    .contact-info-panel .map-container {
+        margin: 0 auto !important;
     }
 }
 
