@@ -347,6 +347,11 @@ function initButtonRedirects() {
     const allRedirectElements = [...buttons, ...btnLinks];
     
     allRedirectElements.forEach(el => {
+        // Exclude login and register form buttons so they can successfully route to the dashboards
+        if (el.closest('#login-active-form') || el.closest('#register-active-form')) {
+            return;
+        }
+        
         el.addEventListener('click', (e) => {
             e.preventDefault();
             e.stopPropagation();
