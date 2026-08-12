@@ -3020,6 +3020,10 @@ body.has-fixed-header {
     font-size: 0.9rem;
 }
 
+.auth-page .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.45) !important;
+}
+
 /* Input Fields with left aligned icons */
 .input-icon-wrapper {
     position: relative;

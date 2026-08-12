@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sign in to your Stackly disaster relief dashboard.">
-    <title>Login | Stackly Vault Portal</title>
-    <link rel="stylesheet" href="css/style.css?v=5.1">
+    <meta name="description" content="Sign in to your disaster relief dashboard.">
+    <title>Login | Disaster Relief Foundation</title>
+    <link rel="stylesheet" href="css/style.css?v=5.2">
 </head>
 <body class="auth-page">
 
@@ -19,7 +19,7 @@
     <div class="auth-card">
         <div class="auth-header">
             <!-- Stackly Logo -->
-            <img src="images/logo.webp" alt="Stackly Logo" style="height: 38px; width: auto; object-fit: contain; margin: 0 auto 20px; display: block;">
+            <img src="images/logo.webp" alt="Stackly Logo" style="height: 38px; width: auto; object-fit: contain; margin: 0 auto 20px; display: block; filter: invert(1);">
             <h2>Welcome Back</h2>
             <p>Log in to access your secure disaster portals.</p>
         </div>
@@ -69,9 +69,23 @@
             </button>
         </form>
         
+        <!-- Demo Credentials Info Box -->
+        <div style="margin: 25px 0 15px; padding: 15px; border-radius: var(--radius-sm); background-color: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); font-size: 0.85rem; text-align: left;">
+            <p style="margin: 0; color: rgba(255,255,255,0.85); font-weight: 600; display: flex; align-items: center; gap: 6px;">
+                <svg viewBox="0 0 24 24" style="width: 14px; height: 14px; fill: #00E676;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                Demo Login Credentials:
+            </p>
+            <p style="margin: 6px 0 0; color: rgba(255,255,255,0.65);">
+                User Role: <code style="color: #00E676; background: rgba(0,230,118,0.1); padding: 2px 6px; border-radius: 3px;">user@stackly.org</code> / <code style="color: #00E676; background: rgba(0,230,118,0.1); padding: 2px 6px; border-radius: 3px;">user123</code>
+            </p>
+            <p style="margin: 6px 0 0; color: rgba(255,255,255,0.65);">
+                Admin Role: <code style="color: #00E676; background: rgba(0,230,118,0.1); padding: 2px 6px; border-radius: 3px;">admin@stackly.org</code> / <code style="color: #00E676; background: rgba(0,230,118,0.1); padding: 2px 6px; border-radius: 3px;">admin123</code>
+            </p>
+        </div>
+        
         <!-- Footer Sign Up link -->
         <div class="auth-footer">
-            <p>Don't have a storage vault? <a href="register.html">Sign Up</a></p>
+            <p>Don't have an account? <a href="register.html">Sign Up</a></p>
         </div>
     </div>
 
