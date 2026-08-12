@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initStoriesSlider();
     initNewsletterForm();
     initFaqAccordion();
+    initButtonRedirects();
 });
 
 /**
@@ -328,6 +329,20 @@ function initFaqAccordion() {
                 content.style.maxHeight = content.scrollHeight + 'px';
                 icon.innerHTML = '&minus;';
             }
+        });
+    });
+}
+
+/**
+ * 9. Redirect all non-interactive / mock buttons to 404.html
+ */
+function initButtonRedirects() {
+    const buttons = document.querySelectorAll('button:not(.hamburger):not(.nav-close-btn):not(.sidebar-close-btn):not(.mobile-sidebar-toggle):not(.password-toggle-icon):not(.password-eye):not(.faq-trigger)');
+    buttons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            window.location.href = '404.html';
         });
     });
 }
