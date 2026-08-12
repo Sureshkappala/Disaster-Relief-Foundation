@@ -359,6 +359,12 @@ function displaySuccessState(form) {
         // Custom redirection logic based on selected access role dropdown or email override
         const roleVal = form.querySelector('#role')?.value || '';
         const emailVal = form.querySelector('input[type="email"]')?.value || '';
+        
+        localStorage.setItem('currentUserEmail', emailVal || 'user@stackly.org');
+        let displayName = (emailVal || 'user@stackly.org').split('@')[0];
+        displayName = displayName.charAt(0).toUpperCase() + displayName.slice(1);
+        localStorage.setItem('currentUserName', displayName);
+        
         if (roleVal === 'admin' || emailVal.toLowerCase().includes('admin')) {
             redirectUrl = "dashboard-admin.html";
         } else {
@@ -369,6 +375,11 @@ function displaySuccessState(form) {
         desc = "Your account has been created successfully. Welcome to the Disaster Relief Foundation.";
         btnText = "Login Now";
         redirectUrl = "login.html";
+        
+        const emailVal = form.querySelector('input[type="email"]')?.value || '';
+        const nameVal = form.querySelector('input[name*="name"], input[id*="name"], input[name*="Name"], input[id*="Name"]')?.value || '';
+        if (emailVal) localStorage.setItem('currentUserEmail', emailVal);
+        if (nameVal) localStorage.setItem('currentUserName', nameVal);
     } else if (formId.includes('contact')) {
         title = "Message Sent!";
         desc = "Thank you for reaching out. Our emergency operations center has received your inquiry.";

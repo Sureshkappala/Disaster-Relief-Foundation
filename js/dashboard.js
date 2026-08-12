@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileSidebar();
     initInteractiveControls();
     renderCharts();
+    initUserProfile();
 });
 
 /**
@@ -514,4 +515,54 @@ function initMobileSidebar() {
             window.location.href = '404.html';
         });
     });
+}
+
+/**
+ * 5. Dynamic User Profile Loader & Custom Logout Handler
+ */
+function initUserProfile() {
+    const userEmail = localStorage.getItem('currentUserEmail') || 'kappalasuresh92@gmail.com';
+    const userName = localStorage.getItem('currentUserName') || 'Suresh Kappala';
+    
+    // 1. Update sidebar profile email
+    const profileEmailEl = document.querySelector('.sidebar-profile span:first-of-type');
+    if (profileEmailEl) {
+        profileEmailEl.textContent = userEmail;
+    }
+    
+    // 2. Update sidebar profile display name / welcome credential text
+    const profileRoleEl = document.querySelector('.sidebar-profile span:last-of-type');
+    if (profileRoleEl) {
+        const currentRole = profileRoleEl.textContent;
+        // Keep EOC Administrator or Volunteer & Donor labels but prepend the display name!
+        profileRoleEl.innerHTML = `<strong style="color: white; display: block; margin-bottom: 2px; font-weight: 700;">${userName}</strong>${currentRole}`;
+    }
+    
+    // 3. Update dashboard header welcome message
+    const welcomeTitleEl = document.querySelector('.dashboard-title h2');
+    if (welcomeTitleEl) {
+        const consoleName = welcomeTitleEl.textContent;
+        welcomeTitleEl.innerHTML = `Welcome Back, ${userName.split(' ')[0]}! <span style="font-size: 1.1rem; font-weight: 500; color: var(--color-text-muted); display: block; margin-top: 4px;">${consoleName}</span>`;
+    }
+
+    // 4. Custom Logout Button Behavior
+    const logoutBtn = document.querySelector('.sidebar-item[href="login.html"]');
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Show toast message
+            showToast("Logging Out... Safe Journey!");
+            
+            // Clear credentials
+            localStorage.removeItem('currentUserEmail');
+            localStorage.removeItem('currentUserName');
+            
+            // Redirect to login.html after delay
+            setTimeout(() => {
+                window.location.href = 'login.html';
+            }, 1000);
+        });
+    }
 }
