@@ -3612,18 +3612,14 @@ input::-ms-clear {
     }
     
     /* Remove panel card background/padding and constrain width on mobile viewports */
-    .contact-info-panel {
-        background-color: transparent !important;
-        padding: 0 !important;
-        box-shadow: none !important;
-        max-width: 100% !important;
-        min-width: 0 !important;
-        box-sizing: border-box !important;
-        word-wrap: break-word !important;
-    }
-    
+    .contact-info-panel,
+    .form-card,
+    .transparency-card,
+    .value-card,
+    .program-card,
+    .auth-card,
+    .about-history-content,
     .form-card-dark {
-        padding: 24px !important;
         max-width: 100% !important;
         min-width: 0 !important;
         box-sizing: border-box !important;
@@ -3631,10 +3627,26 @@ input::-ms-clear {
     }
     
     .contact-info-panel *,
+    .form-card *,
+    .transparency-card *,
+    .value-card *,
+    .program-card *,
+    .auth-card *,
+    .about-history-content *,
     .form-card-dark * {
         white-space: normal !important;
         word-wrap: break-word !important;
         overflow-wrap: break-word !important;
+    }
+    
+    .contact-info-panel {
+        background-color: transparent !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+    }
+    
+    .form-card-dark {
+        padding: 24px !important;
     }
     
     .map-container {
