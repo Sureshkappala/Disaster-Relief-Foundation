@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initNewsletterForm();
     initFaqAccordion();
     initButtonRedirects();
+    initRoleToggleDesc();
 });
 
 /**
@@ -347,8 +348,8 @@ function initButtonRedirects() {
     const allRedirectElements = [...buttons, ...btnLinks];
     
     allRedirectElements.forEach(el => {
-        // Exclude login and register form buttons so they can successfully route to the dashboards
-        if (el.closest('#login-active-form') || el.closest('#register-active-form')) {
+        // Exclude any buttons or links that are inside a form so validation/submission works correctly
+        if (el.closest('form')) {
             return;
         }
         
@@ -358,4 +359,30 @@ function initButtonRedirects() {
             window.location.href = '404.html';
         });
     });
+}
+
+/**
+ * 10. Dynamic role-based description toggle inside Login/Register forms
+ */
+function initRoleToggleDesc() {
+    const roleSelect = document.getElementById('role');
+    const emailInput = document.getElementById('email');
+    const helpDesc = document.getElementById('role-help-desc');
+    if (!roleSelect || !emailInput || !helpDesc) return;
+
+    const updateRoleContent = () => {
+        const val = roleSelect.value;
+        if (val === 'admin') {
+            emailInput.placeholder = 'admin@stackly.org';
+            helpDesc.textContent = 'Administrator account grants access to EOC cluster nodes, webhooks, latency telemetries, and operational dispatch logs.';
+            helpDesc.style.color = '#00E676';
+        } else {
+            emailInput.placeholder = 'user@stackly.org';
+            helpDesc.textContent = 'Client access grants access to relief requests, volunteer sign-up details, evacuation updates, and personal donation logs.';
+            helpDesc.style.color = 'rgba(255, 255, 255, 0.45)';
+        }
+    };
+
+    roleSelect.addEventListener('change', updateRoleContent);
+    updateRoleContent();
 }
