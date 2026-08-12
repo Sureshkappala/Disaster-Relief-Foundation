@@ -300,9 +300,7 @@ function initNewsletterForm() {
     if (!form) return;
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-        const input = form.querySelector('input[type="email"]');
-        alert(`Thank you for subscribing to Stackly's emergency alerts with email: ${input.value}`);
-        form.reset();
+        window.location.href = '404.html';
     });
 }
 

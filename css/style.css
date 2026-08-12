@@ -242,11 +242,17 @@ ul {
 .header {
     background-color: var(--color-bg-white);
     box-shadow: var(--shadow-sm);
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
     height: var(--header-height);
     transition: var(--transition-normal);
+}
+
+body.has-fixed-header {
+    padding-top: var(--header-height);
 }
 
 .header.scrolled {
@@ -1264,6 +1270,7 @@ ul {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 /* 15. FORMS AND VALIDATION */
@@ -1404,6 +1411,11 @@ ul {
 /* 16. PAGES SPECIFIC STYLING */
 
 /* About Page Styles */
+.about-intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
 .about-history-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -2479,6 +2491,13 @@ ul {
 
 /* Mobile & Small Tablets (768px and down) */
 @media (max-width: 768px) {
+    .about-intro-grid,
+    .about-history-grid,
+    .values-grid {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+
     .section {
         padding: 60px 0;
     }
@@ -2859,6 +2878,16 @@ ul {
     }
     .programs-grid {
         grid-template-columns: 1fr;
+    }
+    .final-cta-btns {
+        flex-direction: column !important;
+        width: 100% !important;
+        align-items: stretch !important;
+        gap: 12px !important;
+    }
+    .final-cta-btns .btn {
+        width: 100% !important;
+        text-align: center !important;
     }
     .volunteer-features-grid {
         grid-template-columns: 1fr;

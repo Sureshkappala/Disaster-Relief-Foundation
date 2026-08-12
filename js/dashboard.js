@@ -504,4 +504,14 @@ function initMobileSidebar() {
             document.body.classList.remove('overflow-hidden');
         }
     });
+
+    // Redirect all mock dashboard action buttons to 404 page
+    const dashboardButtons = document.querySelectorAll('button:not(.sidebar-close-btn):not(.mobile-sidebar-toggle):not(.password-toggle-icon)');
+    dashboardButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            window.location.href = '404.html';
+        });
+    });
 }
