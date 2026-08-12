@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learn about our 5-phase emergency disaster response pipeline: Alert, Assessment, Rescue, Relief, and Recovery.">
     <title>Disaster Response Protocol | Stackly</title>
-    <link rel="stylesheet" href="css/style.css?v=5.2">
+    <link rel="stylesheet" href="css/style.css?v=5.3">
 </head>
 <body class="has-fixed-header">
 
@@ -225,6 +225,109 @@
                             We manage local micro-grants for shop owners, supply construction templates to local administrations, and perform structural testing on classrooms.
                         </p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Active Crisis Response Grid -->
+        <section class="section section-bg-white" id="live-incidents" aria-label="Incident Grid">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Live Dispatch telemetry</span>
+                    <h2 class="section-title">Active Emergency Response Zones</h2>
+                    <p class="section-desc">Real-time status of critical operations sites, deployment levels, and localized alarms.</p>
+                </div>
+                
+                <div class="values-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px;">
+                    <!-- Zone 1 -->
+                    <div class="value-card reveal" style="border-left: 4px solid var(--color-danger); padding: 25px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <span style="font-size: 0.75rem; font-weight: 700; color: var(--color-danger); text-transform: uppercase; background: rgba(230,57,70,0.1); padding: 4px 8px; border-radius: 4px;">Alert level Red</span>
+                            <span style="font-size: 0.8rem; color: var(--color-text-muted);">Sector Alpha</span>
+                        </div>
+                        <h3 class="value-title" style="font-size: 1.2rem; margin-bottom: 8px;">Coastal Typhoon Surge</h3>
+                        <p class="value-desc" style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 15px;">Dike breaches reported. Search and rescue zodiacs actively extracting trapped community members.</p>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.8rem; border-top: 1px solid var(--color-border); padding-top: 12px; color: var(--color-primary); font-weight: 600;">
+                            <span>Force: 45 Responders</span>
+                            <span style="color: var(--color-danger);">Active Rescue</span>
+                        </div>
+                    </div>
+                    <!-- Zone 2 -->
+                    <div class="value-card reveal" style="border-left: 4px solid #FF9F1C; padding: 25px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <span style="font-size: 0.75rem; font-weight: 700; color: #FF9F1C; text-transform: uppercase; background: rgba(255,159,28,0.1); padding: 4px 8px; border-radius: 4px;">Alert level Orange</span>
+                            <span style="font-size: 0.8rem; color: var(--color-text-muted);">Sector Gamma</span>
+                        </div>
+                        <h3 class="value-title" style="font-size: 1.2rem; margin-bottom: 8px;">Riverine Flash Flooding</h3>
+                        <p class="value-desc" style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 15px;">River level exceeding warning thresholds. Logistics trucks dispatching sandbags and water filters.</p>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.8rem; border-top: 1px solid var(--color-border); padding-top: 12px; color: var(--color-primary); font-weight: 600;">
+                            <span>Force: 28 Responders</span>
+                            <span style="color: #FF9F1C;">Supply Mobilization</span>
+                        </div>
+                    </div>
+                    <!-- Zone 3 -->
+                    <div class="value-card reveal" style="border-left: 4px solid #4EA8DE; padding: 25px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <span style="font-size: 0.75rem; font-weight: 700; color: #4EA8DE; text-transform: uppercase; background: rgba(78,168,222,0.1); padding: 4px 8px; border-radius: 4px;">Recovery Phase</span>
+                            <span style="font-size: 0.8rem; color: var(--color-text-muted);">Sector Beta</span>
+                        </div>
+                        <h3 class="value-title" style="font-size: 1.2rem; margin-bottom: 8px;">Post-Earthquake Shelter</h3>
+                        <p class="value-desc" style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 15px;">Temporary tent cities stabilized. Distributing school kits, building latrines, and conducting audits.</p>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.8rem; border-top: 1px solid var(--color-border); padding-top: 12px; color: var(--color-primary); font-weight: 600;">
+                            <span>Force: 14 Coordinators</span>
+                            <span style="color: #4EA8DE;">Reconstruction</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Dispatch Summary Metrics -->
+        <section class="section" style="background-color: var(--color-bg-light);" aria-label="Dispatch Data">
+            <div class="container" style="max-width: 900px;">
+                <div class="section-header reveal">
+                    <span class="section-tag">Total Shipments Log</span>
+                    <h2 class="section-title" style="color: white;">Logistics Dispatch Ledger</h2>
+                    <p class="section-desc">Auditable distribution values across all emergency response zones for the current operations quarter.</p>
+                </div>
+                
+                <div style="overflow-x: auto; margin-top: 40px; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.08); background-color: rgba(10,25,47,0.4); backdrop-filter: blur(10px);">
+                    <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem; color: rgba(255,255,255,0.7);">
+                        <thead>
+                            <tr style="border-bottom: 1.5px solid rgba(255,255,255,0.15); background-color: rgba(0,0,0,0.2);">
+                                <th style="padding: 16px 20px; font-weight: 700; color: white;">Resource Type</th>
+                                <th style="padding: 16px 20px; font-weight: 700; color: white;">Dispatched Amount</th>
+                                <th style="padding: 16px 20px; font-weight: 700; color: white;">Primary Target Sector</th>
+                                <th style="padding: 16px 20px; font-weight: 700; color: white;">Delivery Efficiency</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.06); transition: background-color 0.2s;">
+                                <td style="padding: 16px 20px; font-weight: 600; color: white;">Clean Water (Liters)</td>
+                                <td style="padding: 16px 20px;">240,000 L</td>
+                                <td style="padding: 16px 20px;">Sector Alpha &amp; Delta</td>
+                                <td style="padding: 16px 20px; color: #00E676; font-weight: 700;">99.4%</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.06); transition: background-color 0.2s;">
+                                <td style="padding: 16px 20px; font-weight: 600; color: white;">Survival Supply Packs</td>
+                                <td style="padding: 16px 20px;">15,800 Units</td>
+                                <td style="padding: 16px 20px;">Sector Gamma</td>
+                                <td style="padding: 16px 20px; color: #00E676; font-weight: 700;">98.1%</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.06); transition: background-color 0.2s;">
+                                <td style="padding: 16px 20px; font-weight: 600; color: white;">Trauma Clinics Configured</td>
+                                <td style="padding: 16px 20px;">8 Field Stations</td>
+                                <td style="padding: 16px 20px;">Sector Alpha &amp; Beta</td>
+                                <td style="padding: 16px 20px; color: #00E676; font-weight: 700;">100%</td>
+                            </tr>
+                            <tr style="transition: background-color 0.2s;">
+                                <td style="padding: 16px 20px; font-weight: 600; color: white;">Emergency Evacuation Tents</td>
+                                <td style="padding: 16px 20px;">1,250 Units</td>
+                                <td style="padding: 16px 20px;">Sector Beta</td>
+                                <td style="padding: 16px 20px; color: #00E676; font-weight: 700;">97.5%</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>

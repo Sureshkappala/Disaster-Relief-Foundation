@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Register as a disaster volunteer, initiate a fundraiser, or sponsor emergency relief projects with Stackly.">
     <title>Get Involved | Stackly</title>
-    <link rel="stylesheet" href="css/style.css?v=5.2">
+    <link rel="stylesheet" href="css/style.css?v=5.3">
 </head>
 <body class="has-fixed-header">
 
@@ -137,6 +137,94 @@
         </section>
 
         <!-- Section 2: Volunteer Registration Form -->
+        <!-- Section: Volunteer Training Pathway -->
+        <section class="section section-bg-white" id="training-timeline" aria-label="Volunteer Pathway">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Training Pathway</span>
+                    <h2 class="section-title">Responder Preparation Process</h2>
+                    <p class="section-desc">How we onboard, train, and deploy active volunteers into active disaster response zones.</p>
+                </div>
+                
+                <div class="timeline-horizontal reveal" style="margin-top: 40px;">
+                    <!-- Step 1 -->
+                    <div class="timeline-h-step active">
+                        <div class="timeline-h-node"></div>
+                        <div class="timeline-h-content">
+                            <span class="timeline-h-badge">Step 1</span>
+                            <h3 class="timeline-h-title">Orientation</h3>
+                            <p class="timeline-h-desc">Online briefing on humanitarian codes of conduct, coordination protocols, and EOC command hierarchies.</p>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="timeline-h-step active">
+                        <div class="timeline-h-node"></div>
+                        <div class="timeline-h-content">
+                            <span class="timeline-h-badge">Step 2</span>
+                            <h3 class="timeline-h-title">First-Aid Training</h3>
+                            <p class="timeline-h-desc">Hands-on crisis medical training, triage classifications, and basic trauma stabilization drills.</p>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="timeline-h-step active">
+                        <div class="timeline-h-node"></div>
+                        <div class="timeline-h-content">
+                            <span class="timeline-h-badge">Step 3</span>
+                            <h3 class="timeline-h-title">Mock Drills</h3>
+                            <p class="timeline-h-desc">Simulated flood evacuations, warehouse supply inventory handling, and satellite radio setups.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Volunteer Stories -->
+        <section class="section" style="background-color: var(--color-bg-light);" aria-label="Volunteer Testimonials">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Volunteer Voices</span>
+                    <h2 class="section-title" style="color: white;">Stories from the Frontline</h2>
+                    <p class="section-desc">Hear directly from the volunteers who dedicate their time, energy, and care to communities in crisis.</p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px;">
+                    <!-- Testimonial 1 -->
+                    <div class="dashboard-card" style="padding: 30px 24px; border: 1px solid rgba(255,255,255,0.08); background-color: rgba(10,25,47,0.3); display: flex; flex-direction: column;">
+                        <span style="font-size: 3rem; line-height: 1; color: var(--color-secondary); font-weight: 700; margin-bottom: -15px;">&ldquo;</span>
+                        <p style="font-size: 0.95rem; color: rgba(255,255,255,0.7); font-style: italic; line-height: 1.6; margin-bottom: 20px;">
+                            Being deployed to Sector Alpha during the river overflow was intense, but seeing the relief on families' faces as we delivered clean water and dry rations made every hour worth it.
+                        </p>
+                        <div style="margin-top: auto; display: flex; align-items: center; gap: 12px;">
+                            <div style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; border: 2px solid var(--color-secondary);">
+                                <img src="images/story_hope.webp" alt="Volunteer Avatar" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div>
+                                <h4 style="font-size: 0.9rem; color: white; margin: 0; font-weight: 700;">Julian Ramirez</h4>
+                                <span style="font-size: 0.75rem; color: var(--color-text-muted);">Frontline Rescue, 2 Yrs</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="dashboard-card" style="padding: 30px 24px; border: 1px solid rgba(255,255,255,0.08); background-color: rgba(10,25,47,0.3); display: flex; flex-direction: column;">
+                        <span style="font-size: 3rem; line-height: 1; color: var(--color-secondary); font-weight: 700; margin-bottom: -15px;">&ldquo;</span>
+                        <p style="font-size: 0.95rem; color: rgba(255,255,255,0.7); font-style: italic; line-height: 1.6; margin-bottom: 20px;">
+                            Managing supply barcodes and packing relief boxes at the central warehouse is a massive team coordination effort. It's incredibly rewarding to know everything is tracked to the dollar.
+                        </p>
+                        <div style="margin-top: auto; display: flex; align-items: center; gap: 12px;">
+                            <div style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden; border: 2px solid var(--color-secondary);">
+                                <img src="images/story_hope_2.webp" alt="Volunteer Avatar" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div>
+                                <h4 style="font-size: 0.9rem; color: white; margin: 0; font-weight: 700;">Clara Oswald</h4>
+                                <span style="font-size: 0.75rem; color: var(--color-text-muted);">Supply Logistics, 1 Yr</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Registration Section -->
         <section class="section" id="volunteer-registration" aria-label="Volunteer Registration Form">
             <div class="container" style="max-width: 680px;">
                 <div class="form-card reveal">
