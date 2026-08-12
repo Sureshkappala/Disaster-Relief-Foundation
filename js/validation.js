@@ -356,9 +356,10 @@ function displaySuccessState(form) {
         desc = "Redirecting you to the system portal...";
         btnText = "Go to Dashboard";
         
-        // Custom redirection logic based on email for testing
+        // Custom redirection logic based on selected access role dropdown or email override
+        const roleVal = form.querySelector('#role')?.value || '';
         const emailVal = form.querySelector('input[type="email"]')?.value || '';
-        if (emailVal.toLowerCase().includes('admin')) {
+        if (roleVal === 'admin' || emailVal.toLowerCase().includes('admin')) {
             redirectUrl = "dashboard-admin.html";
         } else {
             redirectUrl = "dashboard-user.html";
