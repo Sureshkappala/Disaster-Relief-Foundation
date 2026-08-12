@@ -3565,9 +3565,10 @@ input::-ms-clear {
         align-self: stretch !important;
     }
 
-    .dashboard-dark-layout .dashboard-main {
+    .dashboard-dark-layout .dashboard-main,
+    .dashboard-main {
         padding: 20px !important;
-        padding-top: 80px !important;
+        padding-top: 90px !important;
         width: 100% !important;
     }
 
