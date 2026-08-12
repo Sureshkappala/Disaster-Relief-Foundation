@@ -3596,7 +3596,7 @@ input::-ms-clear {
 }
 
 @media (max-width: 768px) {
-    html, body {
+    html, body, main, section, .section {
         width: 100% !important;
         max-width: 100% !important;
         overflow-x: hidden !important;
@@ -3611,10 +3611,17 @@ input::-ms-clear {
         transform: translateY(0) !important;
     }
     
-    /* Reduce panel card paddings on mobile viewports */
+    /* Reduce panel card paddings and constrain width on mobile viewports */
     .contact-info-panel,
     .form-card-dark {
         padding: 24px !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+    
+    .map-container {
+        max-width: 100% !important;
+        width: 100% !important;
     }
     
     /* Global heading scaling */
