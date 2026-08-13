@@ -172,7 +172,12 @@ function initFormValidators() {
             } else {
                 // If it's a demonstration project, mock form success instead of real submission
                 e.preventDefault();
-                displaySuccessState(form);
+                const formId = form.id || '';
+                if (formId.includes('volunteer') || formId.includes('contact')) {
+                    window.location.href = '404.html';
+                } else {
+                    displaySuccessState(form);
+                }
             }
         });
         
