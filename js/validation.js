@@ -344,8 +344,8 @@ function displaySuccessState(form) {
     if (formId.includes('volunteer')) {
         title = "Welcome Aboard!";
         desc = "Your volunteer application has been successfully submitted. Our rescue coordination team will review it and get in touch within 24 hours.";
-        btnText = "Go to Member Dashboard";
-        redirectUrl = "dashboard-user.html";
+        btnText = "Return";
+        redirectUrl = null;
     } else if (formId.includes('donate')) {
         title = "Donation Received!";
         desc = "Thank you for your generous contribution. Your funds have been allocated to the active disaster response program. A receipt has been sent to your email.";

@@ -45,6 +45,16 @@ function initDashboardTabs() {
             }
         });
     });
+
+    // Check for target tab in URL parameters or hash on load
+    const urlParams = new URLSearchParams(window.location.search);
+    const tabParam = urlParams.get('tab') || window.location.hash.substring(1);
+    if (tabParam) {
+        const targetBtn = document.querySelector(`.sidebar-item[data-tab="${tabParam}"]`);
+        if (targetBtn) {
+            targetBtn.click();
+        }
+    }
 }
 
 /**
