@@ -546,7 +546,12 @@ function initUserProfile() {
     }
 
     // 4. Custom Logout Button Behavior
-    const logoutBtn = document.querySelector('.sidebar-item[href="login.html"]');
+    let logoutBtn = document.getElementById('btn-logout') || document.querySelector('.sidebar-item[href="login.html"]');
+    if (!logoutBtn) {
+        // Fallback: search by text content to support older cached HTML structures
+        logoutBtn = Array.from(document.querySelectorAll('.sidebar-item')).find(el => el.textContent.trim().toLowerCase().includes('logout'));
+    }
+    
     if (logoutBtn) {
         logoutBtn.addEventListener('click', (e) => {
             e.preventDefault();
