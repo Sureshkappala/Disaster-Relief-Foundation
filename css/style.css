@@ -1556,6 +1556,13 @@ body.has-fixed-header {
     color: var(--color-text-muted);
 }
 
+/* FAQ Accordion Styles */
+.faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
 /* Donation Page custom styles (donate.html) */
 .donation-grid {
     display: grid;
@@ -3803,6 +3810,7 @@ input::-ms-clear {
     /* Mobile dashboard specific fixes */
     .dashboard-dark-layout .dashboard-main {
         padding: 15px !important;
+        padding-top: 90px !important;
     }
     
     .dashboard-dark-layout .sidebar-profile {

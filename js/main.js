@@ -321,7 +321,7 @@ function initFaqAccordion() {
             // Close all other items
             document.querySelectorAll('.faq-item').forEach(i => {
                 i.classList.remove('is-open');
-                i.querySelector('.faq-content').style.maxHeight = null;
+                i.querySelector('.faq-content').style.maxHeight = '0px';
                 i.querySelector('.faq-icon').innerHTML = '&plus;';
             });
             
