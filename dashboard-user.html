@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Manage your Stackly donor contributions, volunteer logs, and settings.">
     <title>Member Dashboard | Stackly</title>
-    <link rel="stylesheet" href="css/style.css?v=6.3">
+    <link rel="stylesheet" href="css/style.css?v=6.4">
 </head>
 <body>
 
@@ -357,6 +357,29 @@
                                 </li>
                             </ul>
                         </div>
+                        
+                        <!-- Emergency survival checklist card -->
+                        <div class="dashboard-card" style="padding: 20px; margin-top: 20px;">
+                            <h3 style="font-size: 1rem; color: white; margin-bottom: 12px;">Survival Kit Checklist</h3>
+                            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.8rem; display: flex; flex-direction: column; gap: 10px;">
+                                <li style="display: flex; align-items: center; gap: 8px;">
+                                    <input type="checkbox" checked disabled style="accent-color: var(--color-secondary);">
+                                    <span>3-Day Water Supply (1 Gal/person)</span>
+                                </li>
+                                <li style="display: flex; align-items: center; gap: 8px;">
+                                    <input type="checkbox" checked disabled style="accent-color: var(--color-secondary);">
+                                    <span>Non-perishable Food Rations</span>
+                                </li>
+                                <li style="display: flex; align-items: center; gap: 8px;">
+                                    <input type="checkbox" disabled style="accent-color: var(--color-secondary);">
+                                    <span>First-Aid Medicine Pack</span>
+                                </li>
+                                <li style="display: flex; align-items: center; gap: 8px;">
+                                    <input type="checkbox" disabled style="accent-color: var(--color-secondary);">
+                                    <span>Waterproof Flashlight</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -431,6 +454,25 @@
                                 <li style="display: flex; justify-content: space-between;">
                                     <span>Safety Margin:</span>
                                     <strong style="color: #00E676;">Secure Area</strong>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Emergency broadcast signals card -->
+                        <div class="dashboard-card" style="padding: 20px; margin-top: 20px;">
+                            <h3 style="font-size: 1rem; color: white; margin-bottom: 12px;">Siren Broadcast Signals</h3>
+                            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.8rem; display: flex; flex-direction: column; gap: 10px;">
+                                <li style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 8px;">
+                                    <span>1 Short Blast:</span>
+                                    <strong>Assistance Required</strong>
+                                </li>
+                                <li style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 8px;">
+                                    <span>3 Short Blasts:</span>
+                                    <strong>Move to Safe-Haven</strong>
+                                </li>
+                                <li style="display: flex; justify-content: space-between;">
+                                    <span>Continuous Siren:</span>
+                                    <strong style="color: #FF5252;">Evacuate Sector Now</strong>
                                 </li>
                             </ul>
                         </div>
