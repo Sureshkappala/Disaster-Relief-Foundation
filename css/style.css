@@ -3810,4 +3810,17 @@ input::-ms-clear {
         text-align: center !important;
         gap: 8px !important;
     }
+
+    .welcome-banner-card {
+        padding: 20px 24px !important;
+        margin-bottom: 16px !important;
+    }
+    .welcome-banner-title {
+        font-size: 1.5rem !important;
+        margin-bottom: 8px !important;
+    }
+    .welcome-banner-desc {
+        font-size: 0.85rem !important;
+        line-height: 1.5 !important;
+    }
 }

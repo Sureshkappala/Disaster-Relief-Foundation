@@ -537,12 +537,12 @@ function initUserProfile() {
         // Keep EOC Administrator or Volunteer & Donor labels but prepend the display name!
         profileRoleEl.innerHTML = `<strong style="color: white; display: block; margin-bottom: 2px; font-weight: 700;">${userName}</strong>${currentRole}`;
     }
+
     
-    // 3. Update dashboard header welcome message
-    const welcomeTitleEl = document.querySelector('.dashboard-title h2');
-    if (welcomeTitleEl) {
-        const consoleName = welcomeTitleEl.textContent;
-        welcomeTitleEl.innerHTML = `Welcome Back, ${userName.split(' ')[0]}! <span style="font-size: 1.1rem; font-weight: 500; color: var(--color-text-muted); display: block; margin-top: 4px;">${consoleName}</span>`;
+    // 5. Update welcome banner title dynamically
+    const bannerTitleEl = document.querySelector('.welcome-banner-title');
+    if (bannerTitleEl) {
+        bannerTitleEl.textContent = `HELLO, ${userName.toUpperCase()}`;
     }
 
     // 4. Custom Logout Button Behavior
