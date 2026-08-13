@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Manage your Stackly donor contributions, volunteer logs, and settings.">
     <title>Member Dashboard | Stackly</title>
-    <link rel="stylesheet" href="css/style.css?v=6.1">
+    <link rel="stylesheet" href="css/style.css?v=6.2">
 </head>
 <body>
 
@@ -298,42 +298,66 @@
                     </div>
                 </div>
                 
-                <div class="dashboard-content-card" style="padding: 20px;">
-                    <div class="table-wrapper">
-                        <table class="db-table" aria-label="Help Center Guides Table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">FAQ Topic</th>
-                                    <th scope="col">Recommended Action</th>
-                                    <th scope="col">Assigned Support Center</th>
-                                    <th scope="col">Emergency Contact</th>
-                                    <th scope="col">Guides</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>High Water Warning</td>
-                                    <td>Move to Floor 2+ or roof immediately</td>
-                                    <td>Shelter Zone Alpha</td>
-                                    <td><strong>Hotline 911</strong></td>
-                                    <td><a href="404.html" style="color: var(--color-secondary); font-weight: 600;">Read Manual</a></td>
-                                </tr>
-                                <tr>
-                                    <td>Medical Emergency Dispatch</td>
-                                    <td>Place high-vis safety flag/beacon on roof</td>
-                                    <td>Red Cross Mobile 1</td>
-                                    <td><strong>Hotline 112</strong></td>
-                                    <td><a href="404.html" style="color: var(--color-secondary); font-weight: 600;">Read Manual</a></td>
-                                </tr>
-                                <tr>
-                                    <td>Food &amp; Water Shortages</td>
-                                    <td>Signal rescue team during daily boat pass</td>
-                                    <td>Supply Hub Delta</td>
-                                    <td><strong>Hotline 100</strong></td>
-                                    <td><a href="404.html" style="color: var(--color-secondary); font-weight: 600;">Read Manual</a></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <div class="console-row">
+                    <div class="console-main-col">
+                        <div class="dashboard-content-card" style="padding: 20px;">
+                            <div class="table-wrapper">
+                                <table class="db-table" aria-label="Help Center Guides Table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">FAQ Topic</th>
+                                            <th scope="col">Recommended Action</th>
+                                            <th scope="col">Assigned Support Center</th>
+                                            <th scope="col">Emergency Contact</th>
+                                            <th scope="col">Guides</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>High Water Warning</td>
+                                            <td>Move to Floor 2+ or roof immediately</td>
+                                            <td>Shelter Zone Alpha</td>
+                                            <td><strong>Hotline 911</strong></td>
+                                            <td><a href="404.html" style="color: var(--color-secondary); font-weight: 600;">Read Manual</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Medical Emergency Dispatch</td>
+                                            <td>Place high-vis safety flag/beacon on roof</td>
+                                            <td>Red Cross Mobile 1</td>
+                                            <td><strong>Hotline 112</strong></td>
+                                            <td><a href="404.html" style="color: var(--color-secondary); font-weight: 600;">Read Manual</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Food &amp; Water Shortages</td>
+                                            <td>Signal rescue team during daily boat pass</td>
+                                            <td>Supply Hub Delta</td>
+                                            <td><strong>Hotline 100</strong></td>
+                                            <td><a href="404.html" style="color: var(--color-secondary); font-weight: 600;">Read Manual</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="console-side-col">
+                        <div class="dashboard-card" style="padding: 20px;">
+                            <h3 style="font-size: 1rem; color: white; margin-bottom: 12px;">Local Command Directory</h3>
+                            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.8rem; display: flex; flex-direction: column; gap: 10px;">
+                                <li style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 8px;">
+                                    <span>Sector Alpha Radio</span>
+                                    <strong>Channel 8</strong>
+                                </li>
+                                <li style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 8px;">
+                                    <span>Sector Beta Logistics</span>
+                                    <strong>Channel 12</strong>
+                                </li>
+                                <li style="display: flex; justify-content: space-between;">
+                                    <span>HQ Dispatch Hotline</span>
+                                    <strong style="color: #00E676;">911-DIRECT</strong>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -347,46 +371,70 @@
                     </div>
                 </div>
                 
-                <div class="dashboard-content-card" style="padding: 20px;">
-                    <div class="table-wrapper">
-                        <table class="db-table" aria-label="Active Rescue Dispatches Table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Dispatch ID</th>
-                                    <th scope="col">Service Type</th>
-                                    <th scope="col">Assigned Unit</th>
-                                    <th scope="col">Status</th>
-                                    <th scope="col">ETA</th>
-                                    <th scope="col">Contact Node</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>DISP-901</td>
-                                    <td>Evacuation Boat Rescue</td>
-                                    <td>Coast Guard Unit 4</td>
-                                    <td><span class="status-badge pending" style="color: #FFB300 !important; border-color: rgba(255,179,0,0.3) !important; background-color: rgba(255,179,0,0.1) !important;">DISPATCHED</span></td>
-                                    <td><strong>14 Mins</strong></td>
-                                    <td>Radio Channel 8</td>
-                                </tr>
-                                <tr>
-                                    <td>DISP-893</td>
-                                    <td>First-Aid Ambulance</td>
-                                    <td>Red Cross Mobile 1</td>
-                                    <td><span class="status-badge completed">RESOLVED</span></td>
-                                    <td>Completed</td>
-                                    <td>HQ Clinic Room</td>
-                                </tr>
-                                <tr>
-                                    <td>DISP-880</td>
-                                    <td>Clean Water &amp; Food Supply</td>
-                                    <td>Volunteers Team B</td>
-                                    <td><span class="status-badge completed">RESOLVED</span></td>
-                                    <td>Completed</td>
-                                    <td>Supply Desk A</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <div class="console-row">
+                    <div class="console-main-col">
+                        <div class="dashboard-content-card" style="padding: 20px;">
+                            <div class="table-wrapper">
+                                <table class="db-table" aria-label="Active Rescue Dispatches Table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Dispatch ID</th>
+                                            <th scope="col">Service Type</th>
+                                            <th scope="col">Assigned Unit</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">ETA</th>
+                                            <th scope="col">Contact Node</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>DISP-901</td>
+                                            <td>Evacuation Boat Rescue</td>
+                                            <td>Coast Guard Unit 4</td>
+                                            <td><span class="status-badge pending" style="color: #FFB300 !important; border-color: rgba(255,179,0,0.3) !important; background-color: rgba(255,179,0,0.1) !important;">DISPATCHED</span></td>
+                                            <td><strong>14 Mins</strong></td>
+                                            <td>Radio Channel 8</td>
+                                        </tr>
+                                        <tr>
+                                            <td>DISP-893</td>
+                                            <td>First-Aid Ambulance</td>
+                                            <td>Red Cross Mobile 1</td>
+                                            <td><span class="status-badge completed">RESOLVED</span></td>
+                                            <td>Completed</td>
+                                            <td>HQ Clinic Room</td>
+                                        </tr>
+                                        <tr>
+                                            <td>DISP-880</td>
+                                            <td>Clean Water &amp; Food Supply</td>
+                                            <td>Volunteers Team B</td>
+                                            <td><span class="status-badge completed">RESOLVED</span></td>
+                                            <td>Completed</td>
+                                            <td>Supply Desk A</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="console-side-col">
+                        <div class="dashboard-card" style="padding: 20px;">
+                            <h3 style="font-size: 1rem; color: white; margin-bottom: 12px;">Assigned Shelter Coordinates</h3>
+                            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.8rem; display: flex; flex-direction: column; gap: 10px;">
+                                <li style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 8px;">
+                                    <span>Main Evac Center:</span>
+                                    <strong>Sector Alpha Zone</strong>
+                                </li>
+                                <li style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 8px;">
+                                    <span>Coordinates:</span>
+                                    <strong>34.05N, 118.24W</strong>
+                                </li>
+                                <li style="display: flex; justify-content: space-between;">
+                                    <span>Safety Margin:</span>
+                                    <strong style="color: #00E676;">Secure Area</strong>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

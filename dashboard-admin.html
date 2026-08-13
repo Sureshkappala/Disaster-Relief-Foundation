@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Stackly Administrative Command Center dashboard.">
     <title>Admin Dashboard | Stackly</title>
-    <link rel="stylesheet" href="css/style.css?v=6.1">
+    <link rel="stylesheet" href="css/style.css?v=6.2">
 </head>
 <body>
 
@@ -304,46 +304,96 @@
                     </div>
                 </div>
                 
-                <div class="dashboard-content-card" style="padding: 20px;">
-                    <div class="table-wrapper">
-                        <table class="db-table" aria-label="Volunteer Management Table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Volunteer Name</th>
-                                    <th scope="col">Specialty / Role</th>
-                                    <th scope="col">Status</th>
-                                    <th scope="col">Registered</th>
-                                    <th scope="col">Assigned Sector</th>
-                                    <th scope="col">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>John Carter</td>
-                                    <td>Medical / First Aid</td>
-                                    <td><span class="status-badge pending" style="background-color: rgba(255, 179, 0, 0.1) !important; border-color: rgba(255, 179, 0, 0.3) !important; color: #FFB300 !important;">PENDING</span></td>
-                                    <td>2 hours ago</td>
-                                    <td>Sector Alpha (Medical Unit)</td>
-                                    <td><button class="btn btn-primary btn-sm btn-approve-volunteer">Approve</button></td>
-                                </tr>
-                                <tr>
-                                    <td>Sarah Connor</td>
-                                    <td>Search &amp; Rescue</td>
-                                    <td><span class="status-badge completed">APPROVED</span></td>
-                                    <td>Yesterday</td>
-                                    <td>Sector Beta (Flood Boats)</td>
-                                    <td><button class="btn btn-secondary btn-sm" disabled style="background: transparent; border: none; color: var(--color-text-muted);">Approved</button></td>
-                                </tr>
-                                <tr>
-                                    <td>James Cole</td>
-                                    <td>Supply Logistics</td>
-                                    <td><span class="status-badge completed">APPROVED</span></td>
-                                    <td>2 days ago</td>
-                                    <td>Sector Gamma (Food Supply)</td>
-                                    <td><button class="btn btn-secondary btn-sm" disabled style="background: transparent; border: none; color: var(--color-text-muted);">Approved</button></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <div class="console-row">
+                    <div class="console-main-col">
+                        <!-- Volunteer Statistics Grid -->
+                        <div class="console-metrics-grid" style="margin-bottom: 24px;">
+                            <div class="dashboard-card" style="padding: 16px;">
+                                <span style="font-size: 0.7rem; font-weight: 600; text-transform: uppercase; color: var(--color-text-muted);">Total Registered Force</span>
+                                <h4 style="font-size: 1.4rem; margin: 4px 0; color: white;">1,542 Personnel</h4>
+                            </div>
+                            <div class="dashboard-card" style="padding: 16px;">
+                                <span style="font-size: 0.7rem; font-weight: 600; text-transform: uppercase; color: var(--color-text-muted);">Medically Certified</span>
+                                <h4 style="font-size: 1.4rem; margin: 4px 0; color: white;">342 First-Aiders</h4>
+                            </div>
+                            <div class="dashboard-card" style="padding: 16px;">
+                                <span style="font-size: 0.7rem; font-weight: 600; text-transform: uppercase; color: var(--color-text-muted);">Currently in Field</span>
+                                <h4 style="font-size: 1.4rem; margin: 4px 0; color: #00E676;">1,120 On Duty</h4>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-content-card" style="padding: 20px;">
+                            <h3 style="font-size: 1.1rem; color: white; margin-bottom: 15px;">Pending Field Approvals</h3>
+                            <div class="table-wrapper">
+                                <table class="db-table" aria-label="Volunteer Management Table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Volunteer Name</th>
+                                            <th scope="col">Specialty / Role</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Registered</th>
+                                            <th scope="col">Assigned Sector</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>John Carter</td>
+                                            <td>Medical / First Aid</td>
+                                            <td><span class="status-badge pending" style="background-color: rgba(255, 179, 0, 0.1) !important; border-color: rgba(255, 179, 0, 0.3) !important; color: #FFB300 !important;">PENDING</span></td>
+                                            <td>2 hours ago</td>
+                                            <td>Sector Alpha (Medical Unit)</td>
+                                            <td><button class="btn btn-primary btn-sm btn-approve-volunteer">Approve</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sarah Connor</td>
+                                            <td>Search &amp; Rescue</td>
+                                            <td><span class="status-badge completed">APPROVED</span></td>
+                                            <td>Yesterday</td>
+                                            <td>Sector Beta (Flood Boats)</td>
+                                            <td><button class="btn btn-secondary btn-sm" disabled style="background: transparent; border: none; color: var(--color-text-muted);">Approved</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>James Cole</td>
+                                            <td>Supply Logistics</td>
+                                            <td><span class="status-badge completed">APPROVED</span></td>
+                                            <td>2 days ago</td>
+                                            <td>Sector Gamma (Food Supply)</td>
+                                            <td><button class="btn btn-secondary btn-sm" disabled style="background: transparent; border: none; color: var(--color-text-muted);">Approved</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="console-side-col">
+                        <div class="dashboard-card" style="padding: 20px;">
+                            <h3 style="font-size: 1rem; color: white; margin-bottom: 12px;">Active Training Pathways</h3>
+                            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.8rem; display: flex; flex-direction: column; gap: 12px;">
+                                <li>
+                                    <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                                        <span>Orientation Seminar</span>
+                                        <span style="color: #00E676;">98% Completed</span>
+                                    </div>
+                                    <div class="progress-bar" style="height: 4px;"><div class="progress-fill" style="width: 98%;"></div></div>
+                                </li>
+                                <li>
+                                    <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                                        <span>First-Aid Certification</span>
+                                        <span style="color: #00E676;">84% Completed</span>
+                                    </div>
+                                    <div class="progress-bar" style="height: 4px;"><div class="progress-fill" style="width: 84%;"></div></div>
+                                </li>
+                                <li>
+                                    <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                                        <span>Field Mock Exercises</span>
+                                        <span style="color: #FF5252;">72% Completed</span>
+                                    </div>
+                                    <div class="progress-bar" style="height: 4px;"><div class="progress-fill" style="width: 72%; background-color: #FF5252;"></div></div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -358,46 +408,87 @@
                     <button class="btn btn-primary btn-sm">Log Manual Pledge</button>
                 </div>
                 
-                <div class="dashboard-content-card" style="padding: 20px;">
-                    <div class="table-wrapper">
-                        <table class="db-table" aria-label="Recent Donations Table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Donor Name</th>
-                                    <th scope="col">Amount</th>
-                                    <th scope="col">Relief Campaign Target</th>
-                                    <th scope="col">Status</th>
-                                    <th scope="col">Date Logged</th>
-                                    <th scope="col">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Wayne Enterprises</td>
-                                    <td><strong>$50,000.00</strong></td>
-                                    <td>Coastal Floods Reconstruction</td>
-                                    <td><span class="status-badge completed">CLEARED</span></td>
-                                    <td>Jul 10, 2026</td>
-                                    <td><button class="btn btn-secondary btn-sm" style="border-color: rgba(255,255,255,0.15); color: white;">Details</button></td>
-                                </tr>
-                                <tr>
-                                    <td>Stark Industries</td>
-                                    <td><strong>$25,000.00</strong></td>
-                                    <td>Cyclone Temporary Shelters</td>
-                                    <td><span class="status-badge completed">CLEARED</span></td>
-                                    <td>May 24, 2026</td>
-                                    <td><button class="btn btn-secondary btn-sm" style="border-color: rgba(255,255,255,0.15); color: white;">Details</button></td>
-                                </tr>
-                                <tr>
-                                    <td>LexCorp Relief</td>
-                                    <td><strong>$10,000.00</strong></td>
-                                    <td>Medical Team Support</td>
-                                    <td><span class="status-badge pending" style="background-color: rgba(255,179,0,0.1) !important; border-color: rgba(255,179,0,0.3) !important; color: #FFB300 !important;">PROCESSING</span></td>
-                                    <td>Jan 15, 2026</td>
-                                    <td><button class="btn btn-secondary btn-sm" style="border-color: rgba(255,255,255,0.15); color: white;">Details</button></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <div class="console-row">
+                    <div class="console-main-col">
+                        <!-- Donation Summary Grid -->
+                        <div class="console-metrics-grid" style="margin-bottom: 24px;">
+                            <div class="dashboard-card" style="padding: 16px;">
+                                <span style="font-size: 0.7rem; font-weight: 600; text-transform: uppercase; color: var(--color-text-muted);">Pledged Contributions</span>
+                                <h4 style="font-size: 1.4rem; margin: 4px 0; color: white;">$4,821,500.00</h4>
+                            </div>
+                            <div class="dashboard-card" style="padding: 16px;">
+                                <span style="font-size: 0.7rem; font-weight: 600; text-transform: uppercase; color: var(--color-text-muted);">Total Cleared Funds</span>
+                                <h4 style="font-size: 1.4rem; margin: 4px 0; color: #00E676;">$4,520,000.00</h4>
+                            </div>
+                            <div class="dashboard-card" style="padding: 16px;">
+                                <span style="font-size: 0.7rem; font-weight: 600; text-transform: uppercase; color: var(--color-text-muted);">Direct Aid Conversion</span>
+                                <h4 style="font-size: 1.4rem; margin: 4px 0; color: white;">92.4% Allocated</h4>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-content-card" style="padding: 20px;">
+                            <h3 style="font-size: 1.1rem; color: white; margin-bottom: 15px;">Transaction History Ledger</h3>
+                            <div class="table-wrapper">
+                                <table class="db-table" aria-label="Recent Donations Table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Donor Name</th>
+                                            <th scope="col">Amount</th>
+                                            <th scope="col">Relief Campaign Target</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Date Logged</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Wayne Enterprises</td>
+                                            <td><strong>$50,000.00</strong></td>
+                                            <td>Coastal Floods Reconstruction</td>
+                                            <td><span class="status-badge completed">CLEARED</span></td>
+                                            <td>Jul 10, 2026</td>
+                                            <td><button class="btn btn-secondary btn-sm" style="border-color: rgba(255,255,255,0.15); color: white;">Details</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Stark Industries</td>
+                                            <td><strong>$25,000.00</strong></td>
+                                            <td>Cyclone Temporary Shelters</td>
+                                            <td><span class="status-badge completed">CLEARED</span></td>
+                                            <td>May 24, 2026</td>
+                                            <td><button class="btn btn-secondary btn-sm" style="border-color: rgba(255,255,255,0.15); color: white;">Details</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>LexCorp Relief</td>
+                                            <td><strong>$10,000.00</strong></td>
+                                            <td>Medical Team Support</td>
+                                            <td><span class="status-badge pending" style="background-color: rgba(255,179,0,0.1) !important; border-color: rgba(255,179,0,0.3) !important; color: #FFB300 !important;">PROCESSING</span></td>
+                                            <td>Jan 15, 2026</td>
+                                            <td><button class="btn btn-secondary btn-sm" style="border-color: rgba(255,255,255,0.15); color: white;">Details</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="console-side-col">
+                        <div class="dashboard-card" style="padding: 20px;">
+                            <h3 style="font-size: 1rem; color: white; margin-bottom: 12px;">Top Corporate Sponsors</h3>
+                            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.8rem; display: flex; flex-direction: column; gap: 10px;">
+                                <li style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 8px;">
+                                    <span>Global Health Reserves</span>
+                                    <strong>$120k</strong>
+                                </li>
+                                <li style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 8px;">
+                                    <span>Food Logistics Alliance</span>
+                                    <strong>$95k</strong>
+                                </li>
+                                <li style="display: flex; justify-content: space-between;">
+                                    <span>Safety Engineering Group</span>
+                                    <strong>$60k</strong>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -411,29 +502,53 @@
                     </div>
                 </div>
                 
-                <div class="dashboard-grid">
-                    <!-- Program Item 1 -->
-                    <div class="dashboard-content-card program-control-item" style="padding: 24px;">
-                        <h4 style="margin-bottom: 6px; font-weight: 700; color: var(--color-primary);">Monsoon Floods Relief</h4>
-                        <p style="font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 20px;">Flood rescue and supply bags dispatch.</p>
-                        <div class="form-group" style="margin-bottom: 0;">
-                            <div style="display: flex; justify-content: space-between; font-weight: 600; font-size: 0.85rem; margin-bottom: 8px;">
-                                <span>Adjust Progress</span>
-                                <span class="progress-percentage" style="color: var(--color-secondary);">82%</span>
+                <div class="console-row">
+                    <div class="console-main-col">
+                        <div class="dashboard-grid" style="margin-bottom: 0;">
+                            <!-- Program Item 1 -->
+                            <div class="dashboard-content-card program-control-item" style="padding: 24px;">
+                                <h4 style="margin-bottom: 6px; font-weight: 700; color: var(--color-primary);">Monsoon Floods Relief</h4>
+                                <p style="font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 20px;">Flood rescue and supply bags dispatch.</p>
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <div style="display: flex; justify-content: space-between; font-weight: 600; font-size: 0.85rem; margin-bottom: 8px;">
+                                        <span>Adjust Progress</span>
+                                        <span class="progress-percentage" style="color: var(--color-secondary);">82%</span>
+                                    </div>
+                                    <input type="range" min="0" max="100" value="82" class="form-control program-progress-slider" style="padding: 5px 0; background: transparent; cursor: pointer;">
+                                </div>
                             </div>
-                            <input type="range" min="0" max="100" value="82" class="form-control program-progress-slider" style="padding: 5px 0; background: transparent; cursor: pointer;">
+                            <!-- Program Item 2 -->
+                            <div class="dashboard-content-card program-control-item" style="padding: 24px;">
+                                <h4 style="margin-bottom: 6px; font-weight: 700; color: var(--color-primary);">Cyclone Rehabilitation</h4>
+                                <p style="font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 20px;">Housing rebuild and solar grids.</p>
+                                <div class="form-group" style="margin-bottom: 0;">
+                                    <div style="display: flex; justify-content: space-between; font-weight: 600; font-size: 0.85rem; margin-bottom: 8px;">
+                                        <span>Adjust Progress</span>
+                                        <span class="progress-percentage" style="color: var(--color-secondary);">58%</span>
+                                    </div>
+                                    <input type="range" min="0" max="100" value="58" class="form-control program-progress-slider" style="padding: 5px 0; background: transparent; cursor: pointer;">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!-- Program Item 2 -->
-                    <div class="dashboard-content-card program-control-item" style="padding: 24px;">
-                        <h4 style="margin-bottom: 6px; font-weight: 700; color: var(--color-primary);">Cyclone Rehabilitation</h4>
-                        <p style="font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 20px;">Housing rebuild and solar grids.</p>
-                        <div class="form-group" style="margin-bottom: 0;">
-                            <div style="display: flex; justify-content: space-between; font-weight: 600; font-size: 0.85rem; margin-bottom: 8px;">
-                                <span>Adjust Progress</span>
-                                <span class="progress-percentage" style="color: var(--color-secondary);">58%</span>
-                            </div>
-                            <input type="range" min="0" max="100" value="58" class="form-control program-progress-slider" style="padding: 5px 0; background: transparent; cursor: pointer;">
+
+                    <div class="console-side-col">
+                        <div class="dashboard-card" style="padding: 20px;">
+                            <h3 style="font-size: 1rem; color: white; margin-bottom: 12px;">Active Campaigns List</h3>
+                            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.8rem; display: flex; flex-direction: column; gap: 10px;">
+                                <li style="display: flex; align-items: center; gap: 8px;">
+                                    <div style="width: 8px; height: 8px; border-radius: 50%; background-color: #00E676;"></div>
+                                    <span>Food Supplies Drop (Active)</span>
+                                </li>
+                                <li style="display: flex; align-items: center; gap: 8px;">
+                                    <div style="width: 8px; height: 8px; border-radius: 50%; background-color: #00E676;"></div>
+                                    <span>Clean Water Station setup</span>
+                                </li>
+                                <li style="display: flex; align-items: center; gap: 8px;">
+                                    <div style="width: 8px; height: 8px; border-radius: 50%; background-color: #FF9F1C;"></div>
+                                    <span>Community Rebuild (Pending)</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -448,42 +563,66 @@
                     </div>
                 </div>
                 
-                <div class="dashboard-content-card">
-                    <div class="table-wrapper">
-                        <table class="db-table" id="admin-messages-table" aria-label="HQ Messages Table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Sender</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Message Content</th>
-                                    <th scope="col">Status</th>
-                                    <th scope="col">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>David Vance</td>
-                                    <td>david@vance-refrigeration.com</td>
-                                    <td>Would like to pledge $2,000 corporate matching funds for fire victims. Who do we coordinate with?</td>
-                                    <td><span class="status-badge pending">New Inquest</span></td>
-                                    <td><button class="btn btn-primary btn-sm btn-reply-message">Reply</button></td>
-                                </tr>
-                                <tr>
-                                    <td>Dr. Amanda Ross</td>
-                                    <td>amanda@medical-reserves.org</td>
-                                    <td>I have a team of 4 physicians ready for deployment to the monsoon sector. Can you provide base coordinates?</td>
-                                    <td><span class="status-badge pending">New Inquest</span></td>
-                                    <td><button class="btn btn-primary btn-sm btn-reply-message">Reply</button></td>
-                                </tr>
-                                <tr>
-                                    <td>Clara Oswald</td>
-                                    <td>clara@example.com</td>
-                                    <td>Just registered as a logistics volunteer, looking forward to safety training modules.</td>
-                                    <td><span class="status-badge success">Replied</span></td>
-                                    <td><button class="btn btn-secondary btn-sm" disabled style="border: none; background: transparent; color: var(--color-text-muted);">Replied</button></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <div class="console-row">
+                    <div class="console-main-col">
+                        <div class="dashboard-content-card" style="padding: 20px;">
+                            <div class="table-wrapper">
+                                <table class="db-table" id="admin-messages-table" aria-label="HQ Messages Table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Sender</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Message Content</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>David Vance</td>
+                                            <td>david@vance-refrigeration.com</td>
+                                            <td>Would like to pledge $2,000 corporate matching funds for fire victims. Who do we coordinate with?</td>
+                                            <td><span class="status-badge pending" style="background-color: rgba(255,179,0,0.1) !important; border-color: rgba(255,179,0,0.3) !important; color: #FFB300 !important;">New Inquest</span></td>
+                                            <td><button class="btn btn-primary btn-sm btn-reply-message">Reply</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dr. Amanda Ross</td>
+                                            <td>amanda@medical-reserves.org</td>
+                                            <td>I have a team of 4 physicians ready for deployment to the monsoon sector. Can you provide base coordinates?</td>
+                                            <td><span class="status-badge pending" style="background-color: rgba(255,179,0,0.1) !important; border-color: rgba(255,179,0,0.3) !important; color: #FFB300 !important;">New Inquest</span></td>
+                                            <td><button class="btn btn-primary btn-sm btn-reply-message">Reply</button></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Clara Oswald</td>
+                                            <td>clara@example.com</td>
+                                            <td>Just registered as a logistics volunteer, looking forward to safety training modules.</td>
+                                            <td><span class="status-badge success">Replied</span></td>
+                                            <td><button class="btn btn-secondary btn-sm" disabled style="border: none; background: transparent; color: var(--color-text-muted);">Replied</button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="console-side-col">
+                        <div class="dashboard-card" style="padding: 20px;">
+                            <h3 style="font-size: 1rem; color: white; margin-bottom: 12px;">Inbox Statistics</h3>
+                            <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.8rem; display: flex; flex-direction: column; gap: 10px;">
+                                <li style="display: flex; justify-content: space-between;">
+                                    <span>Unread Inquiries:</span>
+                                    <strong>2 Messages</strong>
+                                </li>
+                                <li style="display: flex; justify-content: space-between;">
+                                    <span>Average Speed:</span>
+                                    <strong style="color: #00E676;">12 mins response</strong>
+                                </li>
+                                <li style="display: flex; justify-content: space-between;">
+                                    <span>Help Rating:</span>
+                                    <strong style="color: #00E676;">98.6% rating</strong>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
